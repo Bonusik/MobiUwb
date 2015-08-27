@@ -30,6 +30,7 @@
 		234EB5431B85AB6A0023E87D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234EB5421B85AB6A0023E87D /* DataManager.swift */; };
 		234EB5451B85AB9A0023E87D /* MobiUwbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */; };
 		23685B281B85ACDD00F5DACC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23685B271B85ACDD00F5DACC /* SwiftyJSON.swift */; };
+		238016911B8F1D96004E180F /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238016901B8F1D96004E180F /* HeaderTableViewCell.swift */; };
 		23AFD3091B8715B400D01806 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AFD3081B8715B400D01806 /* SWXMLHash.swift */; };
 		A6632D3A1B87035100C504FD /* Home-100.png in Resources */ = {isa = PBXBuildFile; fileRef = A6632D391B87035100C504FD /* Home-100.png */; };
 		A6632D3C1B87042400C504FD /* AboutProgramIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6632D3B1B87042400C504FD /* AboutProgramIcon2.png */; };
@@ -83,6 +84,7 @@
 		234EB5421B85AB6A0023E87D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobiUwbModel.swift; sourceTree = "<group>"; };
 		23685B271B85ACDD00F5DACC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		238016901B8F1D96004E180F /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		23AFD3081B8715B400D01806 /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
 		A6632D391B87035100C504FD /* Home-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home-100.png"; sourceTree = "<group>"; };
 		A6632D3B1B87042400C504FD /* AboutProgramIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutProgramIcon2.png; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				23399E191B8467B2009D674B /* BaseTableViewCell.swift */,
+				238016901B8F1D96004E180F /* HeaderTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				231A56391B831743003588E3 /* AppDelegate.swift in Sources */,
 				23399E0D1B845D4A009D674B /* RightMenuController.swift in Sources */,
 				23399E1A1B8467B2009D674B /* BaseTableViewCell.swift in Sources */,
+				238016911B8F1D96004E180F /* HeaderTableViewCell.swift in Sources */,
 				23399E161B846606009D674B /* StringExtension.swift in Sources */,
 				23399E111B846331009D674B /* AboutProgramViewController.swift in Sources */,
 				23399E0F1B846275009D674B /* ContactsViewController.swift in Sources */,
@@ -503,7 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobiUwb/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -514,7 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobiUwb/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

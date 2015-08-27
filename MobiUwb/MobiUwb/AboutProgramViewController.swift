@@ -20,7 +20,6 @@ class AboutProgramViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         DataManager.getMobiUrlConfigWithSuccess { (MobiUrlData) -> Void in
         let xml = SWXMLHash.parse(MobiUrlData)
             self.autors.append(xml["konfiguracja"]["opiekunowie"]["opiekun"].element!.text!)
@@ -33,26 +32,51 @@ class AboutProgramViewController: UIViewController {
             }
         }
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //println(autors.count)
-        return autors.count+2
+    func numberOfSectionInTableView(tableView: UITableView) -> Int {
+        return 4
     }
-    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var rowCount = 0
+        if section == 1 {
+            rowCount = autors.count
+        } else  {
+            rowCount = 1
+        }
+        return rowCount
+    }
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) ->UIView? {
+        let headerCell = tableView.dequeueReusableCellWithIdentifier("headerCell") as! HeaderTableViewCell
+        if section == 0 {
+            headerCell.headerTitle.text = "Opiekun"
+        }else if section == 1 {
+            headerCell.headerTitle.text = "Autorzy"
+        }else if section == 2 {
+            headerCell.headerTitle.text = "Licencja"
+        }else if section == 3 {
+            headerCell.headerTitle.text = "Podziękowania"
+        }
+        return headerCell
+    }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
-        if (indexPath.row < autors.count) {
+        if indexPath.section == 0 {
             let cell: BaseTableViewCell = tableView.dequeueReusableCellWithIdentifier("baseTableViewCell") as! BaseTableViewCell
-            cell.autorLabel.text = autors[indexPath.row]
+            cell.autorLabel.text = "Dominik"
             cell.autorIcon.image = UIImage(named: "OpiekunIcon")
-            tableView.tableFooterView = UIView(frame: CGRectZero)
-            return cell
-        } else if (indexPath.row == autors.count) {
-            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("licencja") as! UITableViewCell
-            return cell
-        } else if (indexPath.row == autors.count+1) {
-            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("podziekowania") as! UITableViewCell
             return cell
         }
+//        if (indexPath.row < autors.count) {
+//            let cell: BaseTableViewCell = tableView.dequeueReusableCellWithIdentifier("baseTableViewCell") as! BaseTableViewCell
+//            cell.autorLabel.text = autors[indexPath.row]
+//            cell.autorIcon.image = UIImage(named: "OpiekunIcon")
+//            tableView.tableFooterView = UIView(frame: CGRectZero)
+//            return cell
+//        } else if (indexPath.row == autors.count) {
+//            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("licencja") as! UITableViewCell
+//            return cell
+//        } else if (indexPath.row == autors.count+1) {
+//            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("podziekowania") as! UITableViewCell
+//            return cell
+//        }
         let cell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         return cell
         
