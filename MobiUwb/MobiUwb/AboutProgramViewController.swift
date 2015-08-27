@@ -22,7 +22,7 @@ class AboutProgramViewController: UIViewController {
         super.viewDidLoad()
         DataManager.getMobiUrlConfigWithSuccess { (MobiUrlData) -> Void in
         let xml = SWXMLHash.parse(MobiUrlData)
-            self.autors.append(xml["konfiguracja"]["opiekunowie"]["opiekun"].element!.text!)
+            //self.autors.append(xml["konfiguracja"]["opiekunowie"]["opiekun"].element!.text!)
             for autor in 0 ..< xml["konfiguracja"]["autorzy"]["autor"].all.count {
               self.autors.append(xml["konfiguracja"]["autorzy"]["autor"][autor].element!.text!)
             }
@@ -32,9 +32,17 @@ class AboutProgramViewController: UIViewController {
             }
         }
     }
-    func numberOfSectionInTableView(tableView: UITableView) -> Int {
+    
+    //Podzial table view na 4 sekcje
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 4
     }
+    
+    
+    
+    //Ustawienie roznych ilosci komorek dla sekcji
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rowCount = 0
         if section == 1 {
@@ -44,6 +52,9 @@ class AboutProgramViewController: UIViewController {
         }
         return rowCount
     }
+    
+    //Tytul kazdej sekcji
+    
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) ->UIView? {
         let headerCell = tableView.dequeueReusableCellWithIdentifier("headerCell") as! HeaderTableViewCell
         if section == 0 {
@@ -52,33 +63,46 @@ class AboutProgramViewController: UIViewController {
             headerCell.headerTitle.text = "Autorzy"
         }else if section == 2 {
             headerCell.headerTitle.text = "Licencja"
-        }else if section == 3 {
+        }else  {
             headerCell.headerTitle.text = "Podziękowania"
         }
         return headerCell
     }
+    
+    //Wypelnienie kolejnych komorek danymi
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        
+        switch indexPath.section {
+            
+        case 0:
             let cell: BaseTableViewCell = tableView.dequeueReusableCellWithIdentifier("baseTableViewCell") as! BaseTableViewCell
-            cell.autorLabel.text = "Dominik"
+            
+            cell.autorLabel.text = "Dominik Tomaszuk"
             cell.autorIcon.image = UIImage(named: "OpiekunIcon")
+            
             return cell
-        }
-//        if (indexPath.row < autors.count) {
-//            let cell: BaseTableViewCell = tableView.dequeueReusableCellWithIdentifier("baseTableViewCell") as! BaseTableViewCell
-//            cell.autorLabel.text = autors[indexPath.row]
-//            cell.autorIcon.image = UIImage(named: "OpiekunIcon")
-//            tableView.tableFooterView = UIView(frame: CGRectZero)
-//            return cell
-//        } else if (indexPath.row == autors.count) {
-//            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("licencja") as! UITableViewCell
-//            return cell
-//        } else if (indexPath.row == autors.count+1) {
-//            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("podziekowania") as! UITableViewCell
-//            return cell
-//        }
+        
+        case 1:
+            let cell: BaseTableViewCell = tableView.dequeueReusableCellWithIdentifier("baseTableViewCell") as! BaseTableViewCell
+            
+            cell.autorLabel.text = autors[indexPath.row]
+            cell.autorIcon.image = UIImage(named: "AutorIcon")
+        
+            return cell
+        case 2:
+            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("licencja") as! UITableViewCell
+            
+            return cell
+        case 3:
+            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("podziekowania") as! UITableViewCell
+            
+            return cell
+        
+        default:
         let cell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         return cell
+        }
         
     }
     override func viewWillAppear(animated: Bool) {
