@@ -31,7 +31,7 @@ class RightMenuController: UIViewController, RightMenuProtocol {
     
     
     //?
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -39,7 +39,7 @@ class RightMenuController: UIViewController, RightMenuProtocol {
         super.viewDidLoad()
         //self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
         self.tableView.tableFooterView = UIView(frame:CGRectZero)
-        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         //?
         let contactsViewController = storyboard.instantiateViewControllerWithIdentifier("ContactsViewController") as! ContactsViewController
         self.contactsViewController = UINavigationController(rootViewController: contactsViewController)

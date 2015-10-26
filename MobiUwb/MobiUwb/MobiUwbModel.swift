@@ -1,6 +1,6 @@
 //
 //  MobiUwbModel.swift
-//  TopApps
+//
 //
 //  Created by Grzegorz Szymański on 13.08.2015.
 //  Copyright (c) 2015 RayWenderlich. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MobiUwbModel: NSObject, Printable {
+class MobiUwbModel: NSObject {
     let data: String
     let tresc: String
     let tytul: String

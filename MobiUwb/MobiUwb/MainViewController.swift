@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class MainViewController: UIViewController {
 
@@ -23,16 +24,16 @@ class MainViewController: UIViewController {
                 
                 for dataJson in unparsedJsonData {
                     
-                    var daneData: String? = dataJson["data"].string
-                    var daneTresc: String? = dataJson["tresc"].string
-                    var daneTytul: String? = dataJson["tytul"].string
+                    let daneData: String? = dataJson["data"].string
+                    let daneTresc: String? = dataJson["tresc"].string
+                    let daneTytul: String? = dataJson["tytul"].string
                     
-                    var oneData = MobiUwbModel(data: daneData, tresc: daneTresc, tytul: daneTytul)
+                    let oneData = MobiUwbModel(data: daneData, tresc: daneTresc, tytul: daneTytul)
                     parsedJsonData.append(oneData)
                 }
                 
             }
-            println(DataManager.checkForNewInformation(parsedJsonData, lastCheckData: "2015-06-12T11:31:14Z"))
+            print(DataManager.checkForNewInformation(parsedJsonData, lastCheckData: "2015-06-12T11:31:14Z"))
         }
         
     }
@@ -42,7 +43,7 @@ class MainViewController: UIViewController {
         self.setNavigationBarItem()
         self.title = "Instytut Informatyki"
         
-        var URL = NSURL(string: "http://ii.uwb.edu.pl/mobi/?place=ii&client=android")
+        let URL = NSURL(string: "http://ii.uwb.edu.pl/mobi/?place=ii&client=android")
         WebView.loadRequest(NSURLRequest(URL: URL!))
     }
 

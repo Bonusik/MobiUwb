@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2913AEA4328B2F222A17CFB71C7FC5B016A97A0B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2913AEA4328B2F222A17CFB71C7FC5B016A97A0B" : 0,
+    "8A2FC641E042D256BAE9D8D2ABD82F5EB3F835AE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2BDEF297-0CF3-4228-8AEE-3ECB8E1C7F91",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2913AEA4328B2F222A17CFB71C7FC5B016A97A0B" : "MobiUwb",
+    "8A2FC641E042D256BAE9D8D2ABD82F5EB3F835AE" : "tutorial"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MobiUwb",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MobiUwb\/MobiUwb.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Bonusik\/MobiUwb.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2913AEA4328B2F222A17CFB71C7FC5B016A97A0B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/cfpraktyki\/tutorial.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8A2FC641E042D256BAE9D8D2ABD82F5EB3F835AE"
+    }
+  ]
+}

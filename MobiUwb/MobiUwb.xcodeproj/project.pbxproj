@@ -15,7 +15,6 @@
 		231A564F1B831744003588E3 /* MobiUwbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A564E1B831744003588E3 /* MobiUwbTests.swift */; };
 		231A56591B831EEB003588E3 /* LeftMenuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 231A56581B831EEB003588E3 /* LeftMenuIcon.png */; };
 		231A565B1B831F9B003588E3 /* RightMenuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 231A565A1B831F9B003588E3 /* RightMenuIcon.png */; };
-		23399E0B1B845C40009D674B /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23399E0A1B845C40009D674B /* SlideMenuController.swift */; };
 		23399E0D1B845D4A009D674B /* RightMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23399E0C1B845D4A009D674B /* RightMenuController.swift */; };
 		23399E0F1B846275009D674B /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23399E0E1B846275009D674B /* ContactsViewController.swift */; };
 		23399E111B846331009D674B /* AboutProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23399E101B846331009D674B /* AboutProgramViewController.swift */; };
@@ -29,10 +28,9 @@
 		23399E241B84A5AD009D674B /* HomeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 23399E231B84A5AD009D674B /* HomeIcon.png */; };
 		234EB5431B85AB6A0023E87D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234EB5421B85AB6A0023E87D /* DataManager.swift */; };
 		234EB5451B85AB9A0023E87D /* MobiUwbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */; };
-		23685B281B85ACDD00F5DACC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23685B271B85ACDD00F5DACC /* SwiftyJSON.swift */; };
+		235C65031BDE1081006FCFDC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 235C65021BDE1081006FCFDC /* Default-568h@2x.png */; };
 		238016911B8F1D96004E180F /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238016901B8F1D96004E180F /* HeaderTableViewCell.swift */; };
 		238016931B8F3580004E180F /* AutorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 238016921B8F3580004E180F /* AutorIcon.png */; };
-		23AFD3091B8715B400D01806 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AFD3081B8715B400D01806 /* SWXMLHash.swift */; };
 		A6632D3A1B87035100C504FD /* Home-100.png in Resources */ = {isa = PBXBuildFile; fileRef = A6632D391B87035100C504FD /* Home-100.png */; };
 		A6632D3C1B87042400C504FD /* AboutProgramIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6632D3B1B87042400C504FD /* AboutProgramIcon2.png */; };
 		A6632D3E1B87050D00C504FD /* ContactIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6632D3D1B87050D00C504FD /* ContactIcon2.png */; };
@@ -45,6 +43,7 @@
 		A6FB66BF1B85B9B000DFD7BF /* InstInfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB66BE1B85B9B000DFD7BF /* InstInfViewController.swift */; };
 		A6FB66C11B85BA9600DFD7BF /* WydzFilolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB66C01B85BA9600DFD7BF /* WydzFilolViewController.swift */; };
 		A6FB66C71B85C56000DFD7BF /* uwb.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB66C61B85C56000DFD7BF /* uwb.png */; };
+		E1FDDDAA761A7F828FCF4EF3 /* Pods_MobiUwb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9CA922D40A441EB08BD70F /* Pods_MobiUwb.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12F92D9925576AC44B3BB6C5 /* Pods-MobiUwb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiUwb.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobiUwb/Pods-MobiUwb.release.xcconfig"; sourceTree = "<group>"; };
 		231A56331B831743003588E3 /* MobiUwb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobiUwb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		231A56371B831743003588E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		231A56381B831743003588E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +70,6 @@
 		231A564E1B831744003588E3 /* MobiUwbTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiUwbTests.swift; sourceTree = "<group>"; };
 		231A56581B831EEB003588E3 /* LeftMenuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeftMenuIcon.png; sourceTree = "<group>"; };
 		231A565A1B831F9B003588E3 /* RightMenuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RightMenuIcon.png; sourceTree = "<group>"; };
-		23399E0A1B845C40009D674B /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		23399E0C1B845D4A009D674B /* RightMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuController.swift; sourceTree = "<group>"; };
 		23399E0E1B846275009D674B /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		23399E101B846331009D674B /* AboutProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutProgramViewController.swift; sourceTree = "<group>"; };
@@ -84,10 +83,10 @@
 		23399E231B84A5AD009D674B /* HomeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeIcon.png; sourceTree = "<group>"; };
 		234EB5421B85AB6A0023E87D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobiUwbModel.swift; sourceTree = "<group>"; };
-		23685B271B85ACDD00F5DACC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		235C65021BDE1081006FCFDC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		238016901B8F1D96004E180F /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		238016921B8F3580004E180F /* AutorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AutorIcon.png; sourceTree = "<group>"; };
-		23AFD3081B8715B400D01806 /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
+		8B9CA922D40A441EB08BD70F /* Pods_MobiUwb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobiUwb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6632D391B87035100C504FD /* Home-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home-100.png"; sourceTree = "<group>"; };
 		A6632D3B1B87042400C504FD /* AboutProgramIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutProgramIcon2.png; sourceTree = "<group>"; };
 		A6632D3D1B87050D00C504FD /* ContactIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContactIcon2.png; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 		A6FB66BE1B85B9B000DFD7BF /* InstInfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstInfViewController.swift; sourceTree = "<group>"; };
 		A6FB66C01B85BA9600DFD7BF /* WydzFilolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WydzFilolViewController.swift; sourceTree = "<group>"; };
 		A6FB66C61B85C56000DFD7BF /* uwb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uwb.png; sourceTree = "<group>"; };
+		CB7AECA23FD12E5D869588C5 /* Pods-MobiUwb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiUwb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobiUwb/Pods-MobiUwb.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1FDDDAA761A7F828FCF4EF3 /* Pods_MobiUwb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,13 +121,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0556B7C85020666DF59B06D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB7AECA23FD12E5D869588C5 /* Pods-MobiUwb.debug.xcconfig */,
+				12F92D9925576AC44B3BB6C5 /* Pods-MobiUwb.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		231A562A1B831743003588E3 = {
 			isa = PBXGroup;
 			children = (
-				23399E091B845C1C009D674B /* Source */,
+				235C65021BDE1081006FCFDC /* Default-568h@2x.png */,
 				231A56351B831743003588E3 /* MobiUwb */,
 				231A564B1B831744003588E3 /* MobiUwbTests */,
 				231A56341B831743003588E3 /* Products */,
+				0556B7C85020666DF59B06D0 /* Pods */,
+				CEEF70022A6E02ADE07074D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,16 +222,6 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		23399E091B845C1C009D674B /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				23399E0A1B845C40009D674B /* SlideMenuController.swift */,
-				23685B271B85ACDD00F5DACC /* SwiftyJSON.swift */,
-				23AFD3081B8715B400D01806 /* SWXMLHash.swift */,
-			);
-			name = Source;
-			sourceTree = "<group>";
-		};
 		23399E121B846568009D674B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +250,14 @@
 			name = DataMenager;
 			sourceTree = "<group>";
 		};
+		CEEF70022A6E02ADE07074D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B9CA922D40A441EB08BD70F /* Pods_MobiUwb.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,9 +265,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 231A56521B831744003588E3 /* Build configuration list for PBXNativeTarget "MobiUwb" */;
 			buildPhases = (
+				57B280D28BE2A312BD547DAD /* Check Pods Manifest.lock */,
 				231A562F1B831743003588E3 /* Sources */,
 				231A56301B831743003588E3 /* Frameworks */,
 				231A56311B831743003588E3 /* Resources */,
+				231BC106258D105330872800 /* Embed Pods Frameworks */,
+				59FCAB3F44C51A95F319C00D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,7 +305,9 @@
 		231A562B1B831743003588E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Grzegorz Szymański";
 				TargetAttributes = {
 					231A56321B831743003588E3 = {
@@ -341,6 +356,7 @@
 				231A56431B831744003588E3 /* LaunchScreen.xib in Resources */,
 				23399E221B849EC9009D674B /* ExitProgramIcon.png in Resources */,
 				A6B25CFC1B8B4B5E0023E097 /* OpiekunIcon.png in Resources */,
+				235C65031BDE1081006FCFDC /* Default-568h@2x.png in Resources */,
 				A6632D3E1B87050D00C504FD /* ContactIcon2.png in Resources */,
 				231A565B1B831F9B003588E3 /* RightMenuIcon.png in Resources */,
 				A6632D3A1B87035100C504FD /* Home-100.png in Resources */,
@@ -359,6 +375,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		231BC106258D105330872800 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobiUwb/Pods-MobiUwb-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57B280D28BE2A312BD547DAD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		59FCAB3F44C51A95F319C00D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobiUwb/Pods-MobiUwb-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		231A562F1B831743003588E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -368,7 +432,6 @@
 				A6FB66BD1B85A7A300DFD7BF /* LeftMenuController.swift in Sources */,
 				A6FB66C11B85BA9600DFD7BF /* WydzFilolViewController.swift in Sources */,
 				234EB5431B85AB6A0023E87D /* DataManager.swift in Sources */,
-				23399E0B1B845C40009D674B /* SlideMenuController.swift in Sources */,
 				23399E1C1B847EE3009D674B /* UIViewControllerExtension.swift in Sources */,
 				A6FB66BF1B85B9B000DFD7BF /* InstInfViewController.swift in Sources */,
 				231A56391B831743003588E3 /* AppDelegate.swift in Sources */,
@@ -379,8 +442,6 @@
 				23399E111B846331009D674B /* AboutProgramViewController.swift in Sources */,
 				23399E0F1B846275009D674B /* ContactsViewController.swift in Sources */,
 				23399E141B8465BF009D674B /* UITableViewExtension.swift in Sources */,
-				23AFD3091B8715B400D01806 /* SWXMLHash.swift in Sources */,
-				23685B281B85ACDD00F5DACC /* SwiftyJSON.swift in Sources */,
 				234EB5451B85AB9A0023E87D /* MobiUwbModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +505,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -508,22 +570,26 @@
 		};
 		231A56531B831744003588E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB7AECA23FD12E5D869588C5 /* Pods-MobiUwb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobiUwb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		231A56541B831744003588E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12F92D9925576AC44B3BB6C5 /* Pods-MobiUwb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobiUwb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -542,6 +608,7 @@
 				);
 				INFOPLIST_FILE = MobiUwbTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobiUwb.app/MobiUwb";
 			};
@@ -557,6 +624,7 @@
 				);
 				INFOPLIST_FILE = MobiUwbTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobiUwb.app/MobiUwb";
 			};

@@ -21,7 +21,7 @@ class ContactsViewController: UIViewController {
         super.viewWillAppear(animated)
         self.setNavigationBarItem()
         self.title = "Contacts"
-        var URL = NSURL(string: "http://ii.uwb.edu.pl/mobi/?place=ii&client=android")
+        let URL = NSURL(string: "http://ii.uwb.edu.pl/mobi/?place=ii&client=android")
         
         WebView.loadRequest(NSURLRequest(URL: URL!))
     }

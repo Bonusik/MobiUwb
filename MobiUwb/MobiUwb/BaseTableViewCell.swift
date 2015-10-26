@@ -23,7 +23,7 @@ public class BaseTableViewCell : UITableViewCell {
     @IBOutlet weak var autorIcon: UIImageView!
     @IBOutlet weak var autorLabel: UILabel!
     
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }

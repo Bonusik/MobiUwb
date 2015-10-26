@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 enum LeftMenu:Int {
     case InstInf = 0
@@ -24,14 +25,14 @@ class LeftMenuController: UIViewController, LeftMenuProtocol {
     var instInfViewController: UIViewController!
     var wydzFilolViewController: UIViewController!
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let instInfViewController = storyboard.instantiateViewControllerWithIdentifier("InstInfViewController") as! InstInfViewController
         self.instInfViewController = UINavigationController(rootViewController: instInfViewController)

@@ -1,0 +1,16 @@
+PODS:
+  - SlideMenuControllerSwift (2.0.0)
+  - SwiftyJSON (2.3.0)
+  - SWXMLHash (2.0.2)
+
+DEPENDENCIES:
+  - SlideMenuControllerSwift (~> 2.0)
+  - SwiftyJSON (~> 2.3)
+  - SWXMLHash (~> 2.0)
+
+SPEC CHECKSUMS:
+  SlideMenuControllerSwift: 85ce7142935a32e26de41aa90fac0cc9f60fb01c
+  SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
+  SWXMLHash: 9e6bd7db2e8275eaf3d2082265623d6e749e169d
+
+COCOAPODS: 0.39.0

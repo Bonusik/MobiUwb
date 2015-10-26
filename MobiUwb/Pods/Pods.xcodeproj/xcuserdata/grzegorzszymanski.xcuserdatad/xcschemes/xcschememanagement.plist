@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-MobiUwb.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SWXMLHash.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SlideMenuControllerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2DED0213AEC223D1EE3B0569AFC6D81D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD330BD223BD5D16EA4FA01698ACDF43</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C63F0F5B04EE2F04E973F6A63B999166</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3FA58B551D3669B551851AD9027853D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

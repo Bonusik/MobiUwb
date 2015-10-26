@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SWXMLHash
 
 class AboutProgramViewController: UIViewController {
     
@@ -14,7 +15,7 @@ class AboutProgramViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -26,7 +27,7 @@ class AboutProgramViewController: UIViewController {
             for autor in 0 ..< xml["konfiguracja"]["autorzy"]["autor"].all.count {
               self.autors.append(xml["konfiguracja"]["autorzy"]["autor"][autor].element!.text!)
             }
-            println(xml["konfiguracja"]["autorzy"]["autor"].all.count)
+            print(xml["konfiguracja"]["autorzy"]["autor"].all.count)
             dispatch_async(dispatch_get_main_queue()) { [unowned self] in
                 self.tableView.reloadData()
             }
@@ -91,11 +92,11 @@ class AboutProgramViewController: UIViewController {
         
             return cell
         case 2:
-            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("licencja") as! UITableViewCell
+            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("licencja")!
             
             return cell
         case 3:
-            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("podziekowania") as! UITableViewCell
+            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("podziekowania")!
             
             return cell
         

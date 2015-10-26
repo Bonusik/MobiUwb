@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func createMenuView() {
         
         // create viewController code...
-        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let mainViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
         let rightViewController = storyboard.instantiateViewControllerWithIdentifier("RightMenuController") as! RightMenuController
