@@ -9,101 +9,96 @@
 import UIKit
 import SWXMLHash
 
-class AboutProgramViewController: UIViewController {
+
+class AboutProgramViewController: UITableViewController {
     
-    var autors:[String]=[]
+    var authors = [String]()
+    var supervisor:String?
     
-    @IBOutlet weak var tableView: UITableView!
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         DataManager.getMobiUrlConfigWithSuccess { (MobiUrlData) -> Void in
         let xml = SWXMLHash.parse(MobiUrlData)
-            //self.autors.append(xml["konfiguracja"]["opiekunowie"]["opiekun"].element!.text!)
-            for autor in 0 ..< xml["konfiguracja"]["autorzy"]["autor"].all.count {
-              self.autors.append(xml["konfiguracja"]["autorzy"]["autor"][autor].element!.text!)
+            self.supervisor=xml["konfiguracja"]["opiekunowie"]["opiekun"].element!.text!
+            for author in 0 ..< xml["konfiguracja"]["autorzy"]["autor"].all.count {
+              self.authors.append(xml["konfiguracja"]["autorzy"]["autor"][author].element!.text!)
             }
-            print(xml["konfiguracja"]["autorzy"]["autor"].all.count)
             dispatch_async(dispatch_get_main_queue()) { [unowned self] in
                 self.tableView.reloadData()
             }
         }
+        
+        tableView.estimatedRowHeight = 60.0
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
-    //Podzial table view na 4 sekcje
+    //Podzial table view na sekcje
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 4
     }
-    
+
     
     
     //Ustawienie roznych ilosci komorek dla sekcji
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rowCount = 0
+        
         if section == 1 {
-            rowCount = autors.count
+            rowCount = authors.count
         } else  {
             rowCount = 1
         }
         return rowCount
     }
+
     
-    //Tytul kazdej sekcji
-    
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) ->UIView? {
-        let headerCell = tableView.dequeueReusableCellWithIdentifier("headerCell") as! HeaderTableViewCell
-        if section == 0 {
-            headerCell.headerTitle.text = "Opiekun"
-        }else if section == 1 {
-            headerCell.headerTitle.text = "Autorzy"
-        }else if section == 2 {
-            headerCell.headerTitle.text = "Licencja"
-        }else  {
-            headerCell.headerTitle.text = "Podziękowania"
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        let headerSection:String
+        
+        switch section {
+        case 0:
+            headerSection = "Opiekun"
+        case 1:
+            headerSection = "Autorzy"
+        case 2:
+            headerSection = "Licencja"
+        case 3:
+            headerSection = "Podziękowania"
+        default:
+            headerSection = ""
         }
-        return headerCell
+        return headerSection
     }
-    
-    //Wypelnienie kolejnych komorek danymi
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+//    //Wypelnienie kolejnych komorek danymi
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell: BaseTableViewCell = tableView.dequeueReusableCellWithIdentifier("authorsCell") as! BaseTableViewCell
         
         switch indexPath.section {
             
         case 0:
-            let cell: BaseTableViewCell = tableView.dequeueReusableCellWithIdentifier("baseTableViewCell") as! BaseTableViewCell
             
-            cell.autorLabel.text = "Dominik Tomaszuk"
-            cell.autorIcon.image = UIImage(named: "OpiekunIcon")
-            
-            return cell
-        
+            cell.aboutLabel.text = supervisor
+            cell.aboutIcon.image = UIImage(named: "OpiekunIcon")
         case 1:
-            let cell: BaseTableViewCell = tableView.dequeueReusableCellWithIdentifier("baseTableViewCell") as! BaseTableViewCell
             
-            cell.autorLabel.text = autors[indexPath.row]
-            cell.autorIcon.image = UIImage(named: "AutorIcon")
-        
-            return cell
+            cell.aboutLabel.text = authors[indexPath.row]
+            cell.aboutIcon.image = UIImage(named: "AutorIcon")
         case 2:
-            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("licencja")!
             
-            return cell
+            cell.aboutLabel.text = "Program na licencji MIT"
         case 3:
-            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("podziekowania")!
             
-            return cell
-        
+            cell.aboutLabel.text = "Autorzy pragną podziękować wszystkim członkom Informatycznego Koła Naukowego UwB oraz dyrekcji Instytutu Informatyki"
         default:
-        let cell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
-        return cell
+            break
         }
+         return cell
         
     }
     override func viewWillAppear(animated: Bool) {
@@ -111,10 +106,5 @@ class AboutProgramViewController: UIViewController {
         self.setNavigationBarItem()
         self.title = "About Program"
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
 }

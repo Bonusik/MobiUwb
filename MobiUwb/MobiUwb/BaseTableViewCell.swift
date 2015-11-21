@@ -20,8 +20,8 @@ public class BaseTableViewCell : UITableViewCell {
     @IBOutlet weak var leftLabel: UILabel!
     
     //do o programie
-    @IBOutlet weak var autorIcon: UIImageView!
-    @IBOutlet weak var autorLabel: UILabel!
+    @IBOutlet weak var aboutIcon: UIImageView!
+    @IBOutlet weak var aboutLabel: UILabel!
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
