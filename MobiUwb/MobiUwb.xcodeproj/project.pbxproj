@@ -28,7 +28,6 @@
 		23399E241B84A5AD009D674B /* HomeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 23399E231B84A5AD009D674B /* HomeIcon.png */; };
 		234EB5431B85AB6A0023E87D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234EB5421B85AB6A0023E87D /* DataManager.swift */; };
 		234EB5451B85AB9A0023E87D /* MobiUwbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */; };
-		235C65031BDE1081006FCFDC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 235C65021BDE1081006FCFDC /* Default-568h@2x.png */; };
 		238016911B8F1D96004E180F /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238016901B8F1D96004E180F /* HeaderTableViewCell.swift */; };
 		238016931B8F3580004E180F /* AutorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 238016921B8F3580004E180F /* AutorIcon.png */; };
 		A6632D3A1B87035100C504FD /* Home-100.png in Resources */ = {isa = PBXBuildFile; fileRef = A6632D391B87035100C504FD /* Home-100.png */; };
@@ -83,7 +82,6 @@
 		23399E231B84A5AD009D674B /* HomeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeIcon.png; sourceTree = "<group>"; };
 		234EB5421B85AB6A0023E87D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobiUwbModel.swift; sourceTree = "<group>"; };
-		235C65021BDE1081006FCFDC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		238016901B8F1D96004E180F /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		238016921B8F3580004E180F /* AutorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AutorIcon.png; sourceTree = "<group>"; };
 		8B9CA922D40A441EB08BD70F /* Pods_MobiUwb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobiUwb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,7 +131,6 @@
 		231A562A1B831743003588E3 = {
 			isa = PBXGroup;
 			children = (
-				235C65021BDE1081006FCFDC /* Default-568h@2x.png */,
 				231A56351B831743003588E3 /* MobiUwb */,
 				231A564B1B831744003588E3 /* MobiUwbTests */,
 				231A56341B831743003588E3 /* Products */,
@@ -356,7 +353,6 @@
 				231A56431B831744003588E3 /* LaunchScreen.xib in Resources */,
 				23399E221B849EC9009D674B /* ExitProgramIcon.png in Resources */,
 				A6B25CFC1B8B4B5E0023E097 /* OpiekunIcon.png in Resources */,
-				235C65031BDE1081006FCFDC /* Default-568h@2x.png in Resources */,
 				A6632D3E1B87050D00C504FD /* ContactIcon2.png in Resources */,
 				231A565B1B831F9B003588E3 /* RightMenuIcon.png in Resources */,
 				A6632D3A1B87035100C504FD /* Home-100.png in Resources */,

@@ -10,7 +10,7 @@ import UIKit
 import SlideMenuControllerSwift
 
 enum LeftMenu:Int {
-    case InstInf = 0
+    case InstInf 
     case WydzFilol
 }
 
@@ -71,12 +71,8 @@ class LeftMenuController: UIViewController, LeftMenuProtocol {
         switch menu {
         case .InstInf:
             self.slideMenuController()?.changeMainViewController(self.instInfViewController, close: true)
-            break
         case .WydzFilol:
             self.slideMenuController()?.changeMainViewController(self.wydzFilolViewController, close: true)
-            break
-        default:
-            break
         }
     }
 }
