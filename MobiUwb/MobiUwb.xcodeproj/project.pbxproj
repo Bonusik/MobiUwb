@@ -30,6 +30,15 @@
 		234EB5451B85AB9A0023E87D /* MobiUwbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */; };
 		238016911B8F1D96004E180F /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238016901B8F1D96004E180F /* HeaderTableViewCell.swift */; };
 		238016931B8F3580004E180F /* AutorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 238016921B8F3580004E180F /* AutorIcon.png */; };
+		23ECA81A1C07121300127927 /* license.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8141C07121300127927 /* license.pdf */; };
+		23ECA81B1C07121300127927 /* Author.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8161C07121300127927 /* Author.png */; };
+		23ECA81C1C07121300127927 /* MiT.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8171C07121300127927 /* MiT.png */; };
+		23ECA81D1C07121300127927 /* Supervisor.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8181C07121300127927 /* Supervisor.png */; };
+		23ECA81E1C07121300127927 /* Thx.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8191C07121300127927 /* Thx.png */; };
+		23ECA8201C07184800127927 /* AuthorW.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA81F1C07184800127927 /* AuthorW.png */; };
+		23ECA8221C0718F400127927 /* ThxW.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8211C0718F400127927 /* ThxW.png */; };
+		23ECA8241C0718FE00127927 /* SupervisorW.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8231C0718FE00127927 /* SupervisorW.png */; };
+		23ECA8261C07190500127927 /* MiTW.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8251C07190500127927 /* MiTW.png */; };
 		A6632D3A1B87035100C504FD /* Home-100.png in Resources */ = {isa = PBXBuildFile; fileRef = A6632D391B87035100C504FD /* Home-100.png */; };
 		A6632D3C1B87042400C504FD /* AboutProgramIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6632D3B1B87042400C504FD /* AboutProgramIcon2.png */; };
 		A6632D3E1B87050D00C504FD /* ContactIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6632D3D1B87050D00C504FD /* ContactIcon2.png */; };
@@ -84,6 +93,15 @@
 		234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobiUwbModel.swift; sourceTree = "<group>"; };
 		238016901B8F1D96004E180F /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		238016921B8F3580004E180F /* AutorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AutorIcon.png; sourceTree = "<group>"; };
+		23ECA8141C07121300127927 /* license.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = license.pdf; sourceTree = "<group>"; };
+		23ECA8161C07121300127927 /* Author.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Author.png; sourceTree = "<group>"; };
+		23ECA8171C07121300127927 /* MiT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MiT.png; sourceTree = "<group>"; };
+		23ECA8181C07121300127927 /* Supervisor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Supervisor.png; sourceTree = "<group>"; };
+		23ECA8191C07121300127927 /* Thx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Thx.png; sourceTree = "<group>"; };
+		23ECA81F1C07184800127927 /* AuthorW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AuthorW.png; sourceTree = "<group>"; };
+		23ECA8211C0718F400127927 /* ThxW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThxW.png; sourceTree = "<group>"; };
+		23ECA8231C0718FE00127927 /* SupervisorW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SupervisorW.png; sourceTree = "<group>"; };
+		23ECA8251C07190500127927 /* MiTW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MiTW.png; sourceTree = "<group>"; };
 		8B9CA922D40A441EB08BD70F /* Pods_MobiUwb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobiUwb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6632D391B87035100C504FD /* Home-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home-100.png"; sourceTree = "<group>"; };
 		A6632D3B1B87042400C504FD /* AboutProgramIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutProgramIcon2.png; sourceTree = "<group>"; };
@@ -166,6 +184,7 @@
 		231A56361B831743003588E3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				23ECA8131C07121300127927 /* AboutIcons */,
 				A6B25CFB1B8B4B5E0023E097 /* OpiekunIcon.png */,
 				238016921B8F3580004E180F /* AutorIcon.png */,
 				A6632D411B87096E00C504FD /* mobiUwB.png */,
@@ -245,6 +264,30 @@
 				234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */,
 			);
 			name = DataMenager;
+			sourceTree = "<group>";
+		};
+		23ECA8131C07121300127927 /* AboutIcons */ = {
+			isa = PBXGroup;
+			children = (
+				23ECA8141C07121300127927 /* license.pdf */,
+				23ECA8151C07121300127927 /* png */,
+			);
+			path = AboutIcons;
+			sourceTree = "<group>";
+		};
+		23ECA8151C07121300127927 /* png */ = {
+			isa = PBXGroup;
+			children = (
+				23ECA81F1C07184800127927 /* AuthorW.png */,
+				23ECA8161C07121300127927 /* Author.png */,
+				23ECA8171C07121300127927 /* MiT.png */,
+				23ECA8251C07190500127927 /* MiTW.png */,
+				23ECA8181C07121300127927 /* Supervisor.png */,
+				23ECA8231C0718FE00127927 /* SupervisorW.png */,
+				23ECA8191C07121300127927 /* Thx.png */,
+				23ECA8211C0718F400127927 /* ThxW.png */,
+			);
+			path = png;
 			sourceTree = "<group>";
 		};
 		CEEF70022A6E02ADE07074D0 /* Frameworks */ = {
@@ -342,18 +385,27 @@
 			files = (
 				A6B25CF81B8B48820023E097 /* LicenceIcon.png in Resources */,
 				23399E241B84A5AD009D674B /* HomeIcon.png in Resources */,
+				23ECA8241C0718FE00127927 /* SupervisorW.png in Resources */,
 				23399E1E1B849D22009D674B /* ContactIcon.png in Resources */,
 				A6632D3C1B87042400C504FD /* AboutProgramIcon2.png in Resources */,
 				A6632D421B87096E00C504FD /* mobiUwB.png in Resources */,
 				A6FB66C71B85C56000DFD7BF /* uwb.png in Resources */,
+				23ECA81E1C07121300127927 /* Thx.png in Resources */,
+				23ECA81A1C07121300127927 /* license.pdf in Resources */,
 				A6B25CFA1B8B48B60023E097 /* ThanksIcon.png in Resources */,
 				231A56591B831EEB003588E3 /* LeftMenuIcon.png in Resources */,
 				A6632D401B87064A00C504FD /* ContactIcon3.png in Resources */,
+				23ECA8201C07184800127927 /* AuthorW.png in Resources */,
 				231A563E1B831743003588E3 /* Main.storyboard in Resources */,
 				231A56431B831744003588E3 /* LaunchScreen.xib in Resources */,
+				23ECA81C1C07121300127927 /* MiT.png in Resources */,
 				23399E221B849EC9009D674B /* ExitProgramIcon.png in Resources */,
+				23ECA81D1C07121300127927 /* Supervisor.png in Resources */,
 				A6B25CFC1B8B4B5E0023E097 /* OpiekunIcon.png in Resources */,
+				23ECA8221C0718F400127927 /* ThxW.png in Resources */,
+				23ECA8261C07190500127927 /* MiTW.png in Resources */,
 				A6632D3E1B87050D00C504FD /* ContactIcon2.png in Resources */,
+				23ECA81B1C07121300127927 /* Author.png in Resources */,
 				231A565B1B831F9B003588E3 /* RightMenuIcon.png in Resources */,
 				A6632D3A1B87035100C504FD /* Home-100.png in Resources */,
 				23399E201B849D34009D674B /* AboutProgramIcon.png in Resources */,

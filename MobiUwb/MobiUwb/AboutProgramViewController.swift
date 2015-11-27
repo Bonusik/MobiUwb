@@ -9,6 +9,12 @@
 import UIKit
 import SWXMLHash
 
+enum AboutSection {
+    case Supervisor
+    case Authors
+    case License
+    case Thanks
+}
 
 class AboutProgramViewController: UITableViewController {
     
@@ -54,26 +60,29 @@ class AboutProgramViewController: UITableViewController {
         return rowCount
     }
 
-    
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        let headerSection:String
-        
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let  headerCell = tableView.dequeueReusableCellWithIdentifier("headerCell") as! HeaderTableViewCell
         switch section {
-        case 0:
-            headerSection = "Opiekun"
-        case 1:
-            headerSection = "Autorzy"
-        case 2:
-            headerSection = "Licencja"
-        case 3:
-            headerSection = "Podziękowania"
+        case AboutSection.Supervisor.hashValue :
+            headerCell.headerTitle.text = "Opiekun"
+        case AboutSection.Authors.hashValue :
+            headerCell.headerTitle.text = "Autorzy"
+        case AboutSection.License.hashValue :
+            headerCell.headerTitle.text = "Licencja"
+        case AboutSection.Thanks.hashValue :
+            headerCell.headerTitle.text = "Podziękowania"
         default:
-            headerSection = ""
+            headerCell.headerTitle.text = "hahash"
         }
-        return headerSection
+        return headerCell
     }
-
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+    }
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.000001
+    }
 //    //Wypelnienie kolejnych komorek danymi
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -81,22 +90,28 @@ class AboutProgramViewController: UITableViewController {
         
         switch indexPath.section {
             
-        case 0:
+        case AboutSection.Supervisor.hashValue:
             
             cell.aboutLabel.text = supervisor
-            cell.aboutIcon.image = UIImage(named: "OpiekunIcon")
-        case 1:
+            cell.aboutIcon.image = UIImage(named: "SupervisorW")
+        
+        case AboutSection.Authors.hashValue:
             
             cell.aboutLabel.text = authors[indexPath.row]
-            cell.aboutIcon.image = UIImage(named: "AutorIcon")
-        case 2:
+            cell.aboutIcon.image = UIImage(named: "AuthorW")
+        
+        case AboutSection.License.hashValue:
             
-            cell.aboutLabel.text = "Program na licencji MIT"
-        case 3:
+            cell.aboutLabel.text = "Program na licencji MITW"
+            cell.aboutIcon.image = UIImage(named: "MiTW")
+        
+        case AboutSection.Thanks.hashValue:
             
             cell.aboutLabel.text = "Autorzy pragną podziękować wszystkim członkom Informatycznego Koła Naukowego UwB oraz dyrekcji Instytutu Informatyki"
+            cell.aboutIcon.image = UIImage(named: "ThxW")
         default:
-            break
+            
+            cell.aboutLabel.text = ""
         }
          return cell
         
