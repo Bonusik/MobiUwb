@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
             let json = JSON(data: MobiUwbData)
             if let unparsedJsonData = json.array {
                 
-                
+                //pozmieniac nazwy zmiennych
                 for dataJson in unparsedJsonData {
                     
                     let daneData: String? = dataJson["data"].string
@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
                 }
                 
             }
-            print(DataManager.checkForNewInformation(parsedJsonData, lastCheckData: "2015-06-12T11:31:14Z"))
+            //print(DataManager.checkForNewInformation(parsedJsonData, lastCheckData: "2015-06-12T11:31:14Z"))
         }
         
     }
@@ -45,6 +45,7 @@ class MainViewController: UIViewController {
         
         let URL = NSURL(string: "http://ii.uwb.edu.pl/mobi/?place=ii&client=android")
         WebView.loadRequest(NSURLRequest(URL: URL!))
+        WebView.scrollView.bounces = false;
     }
 
     override func didReceiveMemoryWarning() {

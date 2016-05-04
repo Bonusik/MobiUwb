@@ -169,13 +169,15 @@
 		231A56351B831743003588E3 /* MobiUwb */ = {
 			isa = PBXGroup;
 			children = (
-				234EB5411B85AB440023E87D /* DataMenager */,
+				23748BF41CD9F41C0047457E /* WebService */,
+				234EB5411B85AB440023E87D /* DataManager */,
 				23399E181B846788009D674B /* View */,
 				23399E121B846568009D674B /* Extension */,
 				23399E081B845B06009D674B /* Controllers */,
 				231A56381B831743003588E3 /* AppDelegate.swift */,
 				231A563F1B831743003588E3 /* Images.xcassets */,
 				231A56411B831744003588E3 /* LaunchScreen.xib */,
+				231A563C1B831743003588E3 /* Main.storyboard */,
 				231A56361B831743003588E3 /* Supporting Files */,
 			);
 			path = MobiUwb;
@@ -226,7 +228,6 @@
 		23399E081B845B06009D674B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				231A563C1B831743003588E3 /* Main.storyboard */,
 				231A563A1B831743003588E3 /* MainViewController.swift */,
 				A6FB66BE1B85B9B000DFD7BF /* InstInfViewController.swift */,
 				A6FB66BC1B85A7A300DFD7BF /* LeftMenuController.swift */,
@@ -257,13 +258,20 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		234EB5411B85AB440023E87D /* DataMenager */ = {
+		234EB5411B85AB440023E87D /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
 				234EB5421B85AB6A0023E87D /* DataManager.swift */,
 				234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */,
 			);
-			name = DataMenager;
+			name = DataManager;
+			sourceTree = "<group>";
+		};
+		23748BF41CD9F41C0047457E /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = WebService;
 			sourceTree = "<group>";
 		};
 		23ECA8131C07121300127927 /* AboutIcons */ = {
@@ -352,6 +360,7 @@
 				TargetAttributes = {
 					231A56321B831743003588E3 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = NFVWX9432C;
 					};
 					231A56471B831744003588E3 = {
 						CreatedOnToolsVersion = 6.4;
@@ -621,11 +630,14 @@
 			baseConfigurationReference = CB7AECA23FD12E5D869588C5 /* Pods-MobiUwb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: egrzegorzszymanski@gmail.com (PWMLCG6UE9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: egrzegorzszymanski@gmail.com (PWMLCG6UE9)";
 				INFOPLIST_FILE = MobiUwb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -634,11 +646,14 @@
 			baseConfigurationReference = 12F92D9925576AC44B3BB6C5 /* Pods-MobiUwb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MobiUwb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

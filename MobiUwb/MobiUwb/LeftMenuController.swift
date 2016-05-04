@@ -34,7 +34,7 @@ class LeftMenuController: UIViewController, LeftMenuProtocol {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let instInfViewController = storyboard.instantiateViewControllerWithIdentifier("InstInfViewController") as! InstInfViewController
+        let instInfViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
         self.instInfViewController = UINavigationController(rootViewController: instInfViewController)
         
         let wydzFilolViewController = storyboard.instantiateViewControllerWithIdentifier("WydzFilolViewController") as! WydzFilolViewController

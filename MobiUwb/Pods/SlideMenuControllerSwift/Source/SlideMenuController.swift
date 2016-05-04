@@ -53,7 +53,7 @@ public class SlideMenuController: UIViewController, UIGestureRecognizerDelegate 
     public var mainViewController: UIViewController?
     public var leftViewController: UIViewController?
     public var leftPanGesture: UIPanGestureRecognizer?
-    public var leftTapGetsture: UITapGestureRecognizer?
+    public var leftTapGesture: UITapGestureRecognizer?
     public var rightViewController: UIViewController?
     public var rightPanGesture: UIPanGestureRecognizer?
     public var rightTapGesture: UITapGestureRecognizer?
@@ -88,9 +88,13 @@ public class SlideMenuController: UIViewController, UIGestureRecognizerDelegate 
         initView()
     }
     
+    public override func awakeFromNib() {
+        initView()
+    }
+
     deinit { }
     
-    func initView() {
+    public func initView() {
         mainContainerView = UIView(frame: view.bounds)
         mainContainerView.backgroundColor = UIColor.clearColor()
         mainContainerView.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
@@ -208,10 +212,10 @@ public class SlideMenuController: UIViewController, UIGestureRecognizerDelegate 
                 view.addGestureRecognizer(leftPanGesture!)
             }
             
-            if leftTapGetsture == nil {
-                leftTapGetsture = UITapGestureRecognizer(target: self, action: "toggleLeft")
-                leftTapGetsture!.delegate = self
-                view.addGestureRecognizer(leftTapGetsture!)
+            if leftTapGesture == nil {
+                leftTapGesture = UITapGestureRecognizer(target: self, action: "toggleLeft")
+                leftTapGesture!.delegate = self
+                view.addGestureRecognizer(leftTapGesture!)
             }
         }
     }
@@ -240,9 +244,9 @@ public class SlideMenuController: UIViewController, UIGestureRecognizerDelegate 
             leftPanGesture = nil
         }
         
-        if leftTapGetsture != nil {
-            view.removeGestureRecognizer(leftTapGetsture!)
-            leftTapGetsture = nil
+        if leftTapGesture != nil {
+            view.removeGestureRecognizer(leftTapGesture!)
+            leftTapGesture = nil
         }
     }
     
@@ -557,6 +561,30 @@ public class SlideMenuController: UIViewController, UIGestureRecognizerDelegate 
         }
     }
     
+    public func changeLeftViewWidth(width: CGFloat) {
+        
+        SlideMenuOptions.leftViewWidth = width;
+        var leftFrame: CGRect = view.bounds
+        leftFrame.size.width = width
+        leftFrame.origin.x = leftMinOrigin();
+        let leftOffset: CGFloat = 0
+        leftFrame.origin.y = leftFrame.origin.y + leftOffset
+        leftFrame.size.height = leftFrame.size.height - leftOffset
+        leftContainerView.frame = leftFrame;
+    }
+    
+    public func changeRightViewWidth(width: CGFloat) {
+        
+        SlideMenuOptions.rightBezelWidth = width;
+        var rightFrame: CGRect = view.bounds
+        rightFrame.size.width = width
+        rightFrame.origin.x = rightMinOrigin()
+        let rightOffset: CGFloat = 0
+        rightFrame.origin.y = rightFrame.origin.y + rightOffset;
+        rightFrame.size.height = rightFrame.size.height - rightOffset
+        rightContainerView.frame = rightFrame;
+    }
+    
     public func changeLeftViewController(leftViewController: UIViewController, closeLeft:Bool) {
         
         removeViewController(self.leftViewController)
@@ -767,6 +795,7 @@ public class SlideMenuController: UIViewController, UIGestureRecognizerDelegate 
     
     private func removeViewController(viewController: UIViewController?) {
         if let _viewController = viewController {
+            _viewController.view.layer.removeAllAnimations()
             _viewController.willMoveToParentViewController(nil)
             _viewController.view.removeFromSuperview()
             _viewController.removeFromParentViewController()
@@ -797,21 +826,26 @@ public class SlideMenuController: UIViewController, UIGestureRecognizerDelegate 
         enableContentInteraction()
     }
     
-    //pragma mark – UIGestureRecognizerDelegate
+    // MARK: UIGestureRecognizerDelegate
     public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-    
+        
         let point: CGPoint = touch.locationInView(view)
         
         if gestureRecognizer == leftPanGesture {
             return slideLeftForGestureRecognizer(gestureRecognizer, point: point)
         } else if gestureRecognizer == rightPanGesture {
             return slideRightViewForGestureRecognizer(gestureRecognizer, withTouchPoint: point)
-        } else if gestureRecognizer == leftTapGetsture {
+        } else if gestureRecognizer == leftTapGesture {
             return isLeftOpen() && !isPointContainedWithinLeftRect(point)
         } else if gestureRecognizer == rightTapGesture {
             return isRightOpen() && !isPointContainedWithinRightRect(point)
         }
         
+        return true
+    }
+    
+    // returning true here helps if the main view is fullwidth with a scrollview
+    public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
     
@@ -903,7 +937,7 @@ extension UIViewController {
     
     // Please specify if you want menu gesuture give priority to than targetScrollView
     public func addPriorityToMenuGesuture(targetScrollView: UIScrollView) {
-        guard let slideControlelr = slideMenuController(), let recognizers = slideControlelr.view.gestureRecognizers else {
+        guard let slideController = slideMenuController(), let recognizers = slideController.view.gestureRecognizers else {
             return
         }
         for recognizer in recognizers where recognizer is UIPanGestureRecognizer {

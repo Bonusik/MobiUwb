@@ -15,7 +15,7 @@ let MobiUrlZajeciaOdwolane = "http://ii.uwb.edu.pl/serwis/?/json/sz"
 let MobiUrlConfig = "http://ii.uwb.edu.pl/mobi/config.xml"
 class DataManager {
   
-  
+  //Create webService support
   class func loadDataFromURL(url: NSURL, completion:(data: NSData?, error: NSError?) -> Void) {
     let session = NSURLSession.sharedSession()
     
@@ -25,7 +25,7 @@ class DataManager {
         completion(data: nil, error: responseError)
       } else if let httpResponse = response as? NSHTTPURLResponse {
         if httpResponse.statusCode != 200 {
-          let statusError = NSError(domain:"com.raywenderlich", code:httpResponse.statusCode, userInfo:[NSLocalizedDescriptionKey : "HTTP status code has unexpected value."])
+          let statusError = NSError(domain:"ii.uwb.edu.pl", code:httpResponse.statusCode, userInfo:[NSLocalizedDescriptionKey : "HTTP status code has unexpected value."])
           completion(data: nil, error: statusError)
         } else {
           completion(data: data, error: nil)

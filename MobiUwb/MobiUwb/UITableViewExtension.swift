@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UITableView {
-    //?
+    
     func registerCellClass(cellClass: AnyClass) {
         let identifier = String.className(cellClass)
         self.registerClass(cellClass, forCellReuseIdentifier: identifier)

@@ -30,7 +30,6 @@ class RightMenuController: UIViewController, RightMenuProtocol {
     var aboutProgramViewController: UIViewController!
     
     
-    //?
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -40,7 +39,7 @@ class RightMenuController: UIViewController, RightMenuProtocol {
         //self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
         self.tableView.tableFooterView = UIView(frame:CGRectZero)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        //?
+   
         let contactsViewController = storyboard.instantiateViewControllerWithIdentifier("ContactsViewController") as! ContactsViewController
         self.contactsViewController = UINavigationController(rootViewController: contactsViewController)
         
@@ -59,7 +58,7 @@ class RightMenuController: UIViewController, RightMenuProtocol {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //?
+
         let cell: BaseTableViewCell = tableView.dequeueReusableCellWithIdentifier("baseTableViewCell") as! BaseTableViewCell
         
         cell.label.text = menus[indexPath.row].0
@@ -67,7 +66,7 @@ class RightMenuController: UIViewController, RightMenuProtocol {
 
         return cell
     }
-    //?
+
     func tableView(TableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let menu = RightMenu(rawValue: indexPath.item) {
             self.changeViewController(menu)

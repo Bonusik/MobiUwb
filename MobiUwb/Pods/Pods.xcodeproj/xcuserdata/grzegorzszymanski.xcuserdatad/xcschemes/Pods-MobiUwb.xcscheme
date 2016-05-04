@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C79A119FB31A94EC24B95C5A'
+               BlueprintIdentifier = '6DEBC60BCBF5A9415AA33213'
                BlueprintName = 'Pods-MobiUwb'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_MobiUwb.framework'>

@@ -24,6 +24,7 @@ class AboutProgramViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Move all download data to appdelegate or add active indicator
         DataManager.getMobiUrlConfigWithSuccess { (MobiUrlData) -> Void in
         let xml = SWXMLHash.parse(MobiUrlData)
             self.supervisor=xml["konfiguracja"]["opiekunowie"]["opiekun"].element!.text!
@@ -34,20 +35,18 @@ class AboutProgramViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        tableView.backgroundColor = UIColor.init(red: 38/255.0, green: 38/255.0, blue: 38/255.0, alpha: 1)
         
         tableView.estimatedRowHeight = 60.0
         tableView.rowHeight = UITableViewAutomaticDimension
     }
     
-    //Podzial table view na sekcje
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 4
     }
 
-    
-    
-    //Ustawienie roznych ilosci komorek dla sekcji
+
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rowCount = 0
@@ -83,7 +82,7 @@ class AboutProgramViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.000001
     }
-//    //Wypelnienie kolejnych komorek danymi
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell: BaseTableViewCell = tableView.dequeueReusableCellWithIdentifier("authorsCell") as! BaseTableViewCell
@@ -102,7 +101,7 @@ class AboutProgramViewController: UITableViewController {
         
         case AboutSection.License.hashValue:
             
-            cell.aboutLabel.text = "Program na licencji MITW"
+            cell.aboutLabel.text = "Program na licencji MIT"
             cell.aboutIcon.image = UIImage(named: "MiTW")
         
         case AboutSection.Thanks.hashValue:
