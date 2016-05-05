@@ -2,24 +2,19 @@
 //  DataManager.swift
 //  TopApps
 //
-//  Created by Dani Arnaout on 9/2/14.
-//  Edited by Eric Cerney on 9/27/14.
-//  Copyright (c) 2014 Ray Wenderlich All rights reserved.
-//
+
 
 import Foundation
 
 
 let MobiUrlAktualnosci = "http://ii.uwb.edu.pl/serwis/?/json/io"
 let MobiUrlZajeciaOdwolane = "http://ii.uwb.edu.pl/serwis/?/json/sz"
-let MobiUrlConfig = "http://ii.uwb.edu.pl/mobi/config.xml"
+
 class DataManager {
   
-  //Create webService support
   class func loadDataFromURL(url: NSURL, completion:(data: NSData?, error: NSError?) -> Void) {
     let session = NSURLSession.sharedSession()
     
-    // Use NSURLSession to get data from an NSURL
     let loadDataTask = session.dataTaskWithURL(url, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
       if let responseError = error {
         completion(data: nil, error: responseError)
@@ -36,28 +31,9 @@ class DataManager {
     loadDataTask.resume()
   }
 
-    class func getMobiAktualnosciDataWithSuccess(success: ((MobiUwbData: NSData!) -> Void)) {
+    class func getDataFrom(adres:String, withSuccess success: ((MobiUwbData: NSData!)  -> Void)) {
         
-        loadDataFromURL(NSURL(string: MobiUrlAktualnosci)!, completion: {(data, error) -> Void in
-            if let urlData = data {
-                
-                success(MobiUwbData: urlData)
-            }
-        })
-    }
-    
-    class func getMobiZajeciaOdwolaneDataWithSuccess(success: ((MobiUwbData: NSData!) -> Void)) {
-        
-        loadDataFromURL(NSURL(string: MobiUrlZajeciaOdwolane)!, completion: {(data, error) -> Void in
-            if let urlData = data {
-                
-                success(MobiUwbData: urlData)
-            }
-        })
-    }
-    class func getMobiUrlConfigWithSuccess(success: ((MobiUwbData: NSData!) -> Void)) {
-        
-        loadDataFromURL(NSURL(string: MobiUrlConfig)!, completion: {(data, error) -> Void in
+        loadDataFromURL(NSURL(string: adres)!, completion: {(data, error) -> Void in
             if let urlData = data {
                 
                 success(MobiUwbData: urlData)

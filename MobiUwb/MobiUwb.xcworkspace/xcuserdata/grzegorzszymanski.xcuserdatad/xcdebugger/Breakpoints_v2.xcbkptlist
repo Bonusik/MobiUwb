@@ -25,30 +25,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MobiUwb/AboutProgramViewController.swift"
-            timestampString = "481525123.576205"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MobiUwb/DataManager.swift"
             timestampString = "481613735.127678"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
             endingLineNumber = "18"
-            landmarkName = "DataManager"
-            landmarkType = "3">
+            landmarkName = "loadDataFromURL(_:completion:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -126,8 +110,69 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "RightMenuController"
-            landmarkType = "3">
+            landmarkName = "init(coder:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MobiUwb/AboutProgramViewController.swift"
+            timestampString = "484080776.422305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobiUwb.AboutProgramViewController.__deallocating_deinit"
+                  moduleName = "MobiUwb"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grzegorzszymanski/Documents/MobiUwb/MobiUwb/MobiUwb/AboutProgramViewController.swift"
+                  timestampString = "484115437.169878"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobiUwb.AboutProgramViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; MobiUwb.AboutProgramViewController"
+                  moduleName = "MobiUwb"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grzegorzszymanski/Documents/MobiUwb/MobiUwb/MobiUwb/AboutProgramViewController.swift"
+                  timestampString = "484115437.170559"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobiUwb.AboutProgramViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MobiUwb.AboutProgramViewController&gt;"
+                  moduleName = "MobiUwb"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grzegorzszymanski/Documents/MobiUwb/MobiUwb/MobiUwb/AboutProgramViewController.swift"
+                  timestampString = "484115437.170817"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -169,7 +169,6 @@
 		231A56351B831743003588E3 /* MobiUwb */ = {
 			isa = PBXGroup;
 			children = (
-				23748BF41CD9F41C0047457E /* WebService */,
 				234EB5411B85AB440023E87D /* DataManager */,
 				23399E181B846788009D674B /* View */,
 				23399E121B846568009D674B /* Extension */,
@@ -265,13 +264,6 @@
 				234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */,
 			);
 			name = DataManager;
-			sourceTree = "<group>";
-		};
-		23748BF41CD9F41C0047457E /* WebService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = WebService;
 			sourceTree = "<group>";
 		};
 		23ECA8131C07121300127927 /* AboutIcons */ = {
@@ -632,12 +624,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: egrzegorzszymanski@gmail.com (PWMLCG6UE9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: egrzegorzszymanski@gmail.com (PWMLCG6UE9)";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = MobiUwb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -648,12 +642,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = MobiUwb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

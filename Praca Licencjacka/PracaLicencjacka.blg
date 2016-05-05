@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: PracaLicencjacka.aux
+The style file: plain.bst
+Database file #1: myBib.bib
+Warning--string name "december" is undefined
+--line 64 of file myBib.bib
+Warning--string name "november" is undefined
+--line 72 of file myBib.bib
+Warning--string name "march" is undefined
+--line 82 of file myBib.bib
+Warning--empty institution in Bray:05:JSON
+Warning--empty institution in Nottingam:05:Atom
+You've used 12 entries,
+            2118 wiz_defined-function locations,
+            565 strings with 5349 characters,
+and the built_in function-call counts, 2778 in all, are:
+= -- 271
+> -- 110
+< -- 0
++ -- 48
+- -- 34
+* -- 136
+:= -- 522
+add.period$ -- 41
+call.type$ -- 12
+change.case$ -- 58
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 124
+empty$ -- 230
+format.name$ -- 34
+if$ -- 567
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 14
+newline$ -- 68
+num.names$ -- 24
+pop$ -- 66
+preamble$ -- 1
+purify$ -- 41
+quote$ -- 0
+skip$ -- 66
+stack$ -- 0
+substring$ -- 62
+swap$ -- 7
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 34
+warning$ -- 2
+while$ -- 24
+width$ -- 14
+write$ -- 142
+(There were 5 warnings)

@@ -1,0 +1,33 @@
+\BOOKMARK [0][-]{chapter*.2}{Streszczenie}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{Wstep}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Serializacja i prezentacja danych}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Standardy internetowe}{chapter.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.1}{HTML}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.2}{CSS}{section.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.3}{JavaScript}{section.1.1}% 7
+\BOOKMARK [1][-]{section.1.2}{Biblioteki jezyka JavaScript}{chapter.1}% 8
+\BOOKMARK [2][-]{subsection.1.2.1}{jQuery}{section.1.2}% 9
+\BOOKMARK [2][-]{subsection.1.2.2}{jQuery Mobile}{section.1.2}% 10
+\BOOKMARK [1][-]{section.1.3}{Reprezentacja danych}{chapter.1}% 11
+\BOOKMARK [2][-]{subsection.1.3.1}{JSON}{section.1.3}% 12
+\BOOKMARK [2][-]{subsection.1.3.2}{XML}{section.1.3}% 13
+\BOOKMARK [2][-]{subsection.1.3.3}{Atom}{section.1.3}% 14
+\BOOKMARK [0][-]{chapter.2}{Platforma iOS}{}% 15
+\BOOKMARK [1][-]{section.2.1}{Mobilny system operacyjny}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.1.1}{Charakterystyka iOS}{section.2.1}% 17
+\BOOKMARK [2][-]{subsection.2.1.2}{Mozliwosci developerskie w iOS 9.0}{section.2.1}% 18
+\BOOKMARK [1][-]{section.2.2}{Srodowisko programistyczne Xcode}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.3}{Jezyki programowania}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.3.1}{Objective-C}{section.2.3}% 21
+\BOOKMARK [2][-]{subsection.2.3.2}{Swift}{section.2.3}% 22
+\BOOKMARK [0][-]{chapter.3}{Implementacja aplikacji}{}% 23
+\BOOKMARK [1][-]{section.3.1}{Opis aplikacji MobiUwB}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.1.1}{Zastosowania}{section.3.1}% 25
+\BOOKMARK [2][-]{subsection.3.1.2}{Funkcje}{section.3.1}% 26
+\BOOKMARK [2][-]{subsection.3.1.3}{Elementy}{section.3.1}% 27
+\BOOKMARK [1][-]{section.3.2}{Architektura programu}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.3}{Uzyte biblioteki}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.4}{Schematy Konfiguracji}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.4.1}{Schematy XML}{section.3.4}% 31
+\BOOKMARK [2][-]{subsection.3.4.2}{Schematy JSON}{section.3.4}% 32
+\BOOKMARK [0][-]{subsection.3.4.2}{Bibliografia}{}% 33

@@ -1,0 +1,69 @@
+\begin{thebibliography}{10}
+
+\bibitem{Berjon:14:H}
+Robin Berjon, Steve Faulkner, Travis Leithead, Silvia Pfeiffer, Edward
+  O'Connor, and Erika~Doyle Navara.
+\newblock {HTML5}.
+\newblock Candidate recommendation, W3C, July 2014.
+\newblock http://www.w3.org/TR/2014/CR-html5-20140731/.
+
+\bibitem{Bray:05:JSON}
+T.~Bray.
+\newblock The javascript object notation (json) data interchange format.
+\newblock Technical report, 2014.
+\newblock https://tools.ietf.org/html/rfc7159.
+
+\bibitem{Bray:11:XML}
+Tim Bray.
+\newblock Extensible markup language (xml) 1.0 (fifth edition).
+\newblock W3c recommendation, W3C, 2008.
+\newblock http://www.w3.org/TR/2008/REC-xml-20081126/.
+
+\bibitem{Castro:2008:H}
+Elizabeth Castro.
+\newblock {\em Po prostu HTML, XHTML i CSS}.
+\newblock Helion, vi edition, 2008.
+
+\bibitem{Etemad:11:CSS}
+Elika Etemad.
+\newblock Cascading style sheets ({CSS}) snapshot 2010.
+\newblock {W3C} note, W3C, May 2011.
+\newblock http://www.w3.org/TR/2011/NOTE-css-2010-20110512/.
+
+\bibitem{Hogan:2010:H}
+Brian~P. Hogan.
+\newblock {\em HTML5 i CSS3: Standardy przyszłości}.
+\newblock Helion, i edition, 2011.
+
+\bibitem{Holzner:2008:AJAX}
+Steven Holzner.
+\newblock {\em Ajax. Biblia}.
+\newblock Helion, i edition, 2008.
+
+\bibitem{Kohan:2012:Obj}
+Stephen~G. Kochan.
+\newblock {\em Objective-C Vademecum profesjonalisty}.
+\newblock Helion, iii edition, 2012.
+
+\bibitem{Nottingam:05:Atom}
+R.~Sayre M.~Nottingham.
+\newblock The atom syndication format.
+\newblock Technical report, 2005.
+\newblock https://tools.ietf.org/html/rfc4287.
+
+\bibitem{Lassoff:2014:Swift}
+Tom~Stachowitz Mark A.~Lassoff.
+\newblock {\em Podstawy języka Swift}.
+\newblock Helion, iii edition, 2016.
+
+\bibitem{McFarland:2012:JS}
+David~Sawyer McFarland.
+\newblock {\em JavaScript i jQuery: nieoficjalny podręcznik}.
+\newblock Helion, i edition, 2012.
+
+\bibitem{Negrino:2007:J}
+Dori~Smith Tom~Negrino.
+\newblock {\em Po prostu JavaScript i Ajax.}
+\newblock Helion, vi edition, 2007.
+
+\end{thebibliography}

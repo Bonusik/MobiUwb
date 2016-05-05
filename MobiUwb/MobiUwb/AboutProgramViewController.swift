@@ -9,6 +9,8 @@
 import UIKit
 import SWXMLHash
 
+
+
 enum AboutSection {
     case Supervisor
     case Authors
@@ -18,14 +20,14 @@ enum AboutSection {
 
 class AboutProgramViewController: UITableViewController {
     
+    let MobiUrlConfig = "http://ii.uwb.edu.pl/mobi/config.xml"
     var authors = [String]()
     var supervisor:String?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Move all download data to appdelegate or add active indicator
-        DataManager.getMobiUrlConfigWithSuccess { (MobiUrlData) -> Void in
+        DataManager.getDataFrom(MobiUrlConfig) { (MobiUrlData) -> Void in
         let xml = SWXMLHash.parse(MobiUrlData)
             self.supervisor=xml["konfiguracja"]["opiekunowie"]["opiekun"].element!.text!
             for author in 0 ..< xml["konfiguracja"]["autorzy"]["autor"].all.count {

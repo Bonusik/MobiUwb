@@ -15,27 +15,27 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var  parsedJsonData = [MobiUwbModel]()
+//        var  parsedJsonData = [MobiUwbModel]()
         
-        DataManager.getMobiZajeciaOdwolaneDataWithSuccess { (MobiUwbData) -> Void in
-            let json = JSON(data: MobiUwbData)
-            if let unparsedJsonData = json.array {
-                
-                //pozmieniac nazwy zmiennych
-                for dataJson in unparsedJsonData {
-                    
-                    let daneData: String? = dataJson["data"].string
-                    let daneTresc: String? = dataJson["tresc"].string
-                    let daneTytul: String? = dataJson["tytul"].string
-                    
-                    let oneData = MobiUwbModel(data: daneData, tresc: daneTresc, tytul: daneTytul)
-                    parsedJsonData.append(oneData)
-                }
-                
-            }
-            //print(DataManager.checkForNewInformation(parsedJsonData, lastCheckData: "2015-06-12T11:31:14Z"))
-        }
-        
+//        DataManager.getMobiZajeciaOdwolaneDataWithSuccess { (MobiUwbData) -> Void in
+//            let json = JSON(data: MobiUwbData)
+//            if let unparsedJsonData = json.array {
+//                
+//                //pozmieniac nazwy zmiennych
+//                for dataJson in unparsedJsonData {
+//                    
+//                    let daneData: String? = dataJson["data"].string
+//                    let daneTresc: String? = dataJson["tresc"].string
+//                    let daneTytul: String? = dataJson["tytul"].string
+//                    
+//                    let oneData = MobiUwbModel(data: daneData, tresc: daneTresc, tytul: daneTytul)
+//                    parsedJsonData.append(oneData)
+//                }
+//                
+//            }
+//            //print(DataManager.checkForNewInformation(parsedJsonData, lastCheckData: "2015-06-12T11:31:14Z"))
+//        }
+//        
     }
     
     override func viewWillAppear(animated: Bool) {
