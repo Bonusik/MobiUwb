@@ -84,11 +84,13 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-MobiUwb/MBProgressHUD.framework"
   install_framework "Pods-MobiUwb/SWXMLHash.framework"
   install_framework "Pods-MobiUwb/SlideMenuControllerSwift.framework"
   install_framework "Pods-MobiUwb/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-MobiUwb/MBProgressHUD.framework"
   install_framework "Pods-MobiUwb/SWXMLHash.framework"
   install_framework "Pods-MobiUwb/SlideMenuControllerSwift.framework"
   install_framework "Pods-MobiUwb/SwiftyJSON.framework"

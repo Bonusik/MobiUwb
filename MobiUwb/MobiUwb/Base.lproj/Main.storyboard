@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -180,21 +180,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8A-NR-UHR">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zWT-Af-Mug">
+                                <rect key="frame" x="0.0" y="28" width="600" height="21"/>
+                                <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDb-Tr-OXl">
+                                <rect key="frame" x="8" y="57" width="584" height="40"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5kE-kQ-uhV"/>
+                                </constraints>
+                                <state key="normal" title="email" image="ic_action_email.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="emailButtonPressed:" destination="Rca-rp-HiR" eventType="touchUpInside" id="AMF-JW-uzP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVn-ph-Xem">
+                                <rect key="frame" x="8" y="105" width="584" height="40"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LK9-3S-U1N"/>
+                                </constraints>
+                                <state key="normal" title="phone" image="ic_action_call.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="phoneButtonPressed:" destination="Rca-rp-HiR" eventType="touchUpInside" id="988-nH-udN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHP-r0-cee">
+                                <rect key="frame" x="8" y="153" width="584" height="40"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ipS-DI-hni"/>
+                                </constraints>
+                                <state key="normal" title="fax" image="ic_action_fax.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOz-7h-g54">
+                                <rect key="frame" x="8" y="201" width="584" height="40"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Q9L-jf-2yE"/>
+                                </constraints>
+                                <state key="normal" title="Lokalizacja" image="ic_action_map.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="localizationButtonPressed:" destination="Rca-rp-HiR" eventType="touchUpInside" id="a0b-TY-As7"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="I8A-NR-UHR" firstAttribute="top" secondItem="jLo-5u-0KP" secondAttribute="top" id="3l6-bd-6Lb"/>
-                            <constraint firstItem="I8A-NR-UHR" firstAttribute="leading" secondItem="jLo-5u-0KP" secondAttribute="leading" id="X6G-Q1-w1a"/>
-                            <constraint firstAttribute="bottom" secondItem="I8A-NR-UHR" secondAttribute="bottom" id="gf0-68-ReX"/>
-                            <constraint firstAttribute="trailing" secondItem="I8A-NR-UHR" secondAttribute="trailing" id="n45-TW-Bz5"/>
+                            <constraint firstItem="YOz-7h-g54" firstAttribute="leading" secondItem="jLo-5u-0KP" secondAttribute="leading" constant="8" id="1lM-sd-U7Y"/>
+                            <constraint firstItem="EDb-Tr-OXl" firstAttribute="leading" secondItem="jLo-5u-0KP" secondAttribute="leading" constant="8" id="5dE-RJ-WZD"/>
+                            <constraint firstItem="yVn-ph-Xem" firstAttribute="top" secondItem="EDb-Tr-OXl" secondAttribute="bottom" constant="8" id="DoX-x5-ooH"/>
+                            <constraint firstItem="yVn-ph-Xem" firstAttribute="leading" secondItem="jLo-5u-0KP" secondAttribute="leading" constant="8" id="Dv6-Ga-E4y"/>
+                            <constraint firstAttribute="trailing" secondItem="yVn-ph-Xem" secondAttribute="trailing" constant="8" id="YfA-oW-k6j"/>
+                            <constraint firstItem="OHP-r0-cee" firstAttribute="top" secondItem="yVn-ph-Xem" secondAttribute="bottom" constant="8" id="b0I-wV-MCm"/>
+                            <constraint firstItem="OHP-r0-cee" firstAttribute="leading" secondItem="jLo-5u-0KP" secondAttribute="leading" constant="8" id="ckP-D7-EsV"/>
+                            <constraint firstItem="zWT-Af-Mug" firstAttribute="top" secondItem="l1E-9Q-gPV" secondAttribute="bottom" constant="8" id="f6u-7a-EPq"/>
+                            <constraint firstAttribute="trailing" secondItem="YOz-7h-g54" secondAttribute="trailing" constant="8" id="fOb-5H-Xpg"/>
+                            <constraint firstAttribute="trailing" secondItem="EDb-Tr-OXl" secondAttribute="trailing" constant="8" id="gZX-CS-p8F"/>
+                            <constraint firstItem="zWT-Af-Mug" firstAttribute="leading" secondItem="jLo-5u-0KP" secondAttribute="leading" id="hkF-tD-9kJ"/>
+                            <constraint firstAttribute="trailing" secondItem="zWT-Af-Mug" secondAttribute="trailing" id="p9E-JR-iRk"/>
+                            <constraint firstItem="EDb-Tr-OXl" firstAttribute="top" secondItem="zWT-Af-Mug" secondAttribute="bottom" constant="8" id="tqN-CZ-auv"/>
+                            <constraint firstItem="YOz-7h-g54" firstAttribute="top" secondItem="OHP-r0-cee" secondAttribute="bottom" constant="8" id="vLA-IS-L8A"/>
+                            <constraint firstAttribute="trailing" secondItem="OHP-r0-cee" secondAttribute="trailing" constant="8" id="x0q-26-gmU"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="WebView" destination="I8A-NR-UHR" id="0qu-9x-Tjy"/>
+                        <outlet property="address" destination="zWT-Af-Mug" id="6ao-nT-yFg"/>
+                        <outlet property="email" destination="EDb-Tr-OXl" id="ntz-TI-tv2"/>
+                        <outlet property="fax" destination="OHP-r0-cee" id="ON2-4J-vGF"/>
+                        <outlet property="location" destination="YOz-7h-g54" id="e16-eS-lYK"/>
+                        <outlet property="phone" destination="yVn-ph-Xem" id="r9X-Yt-Vxq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAr-hx-fU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,6 +421,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_action_call.png" width="32" height="32"/>
+        <image name="ic_action_email.png" width="32" height="32"/>
+        <image name="ic_action_fax.png" width="32" height="32"/>
+        <image name="ic_action_map.png" width="32" height="32"/>
         <image name="uwb.png" width="100" height="100"/>
     </resources>
 </document>

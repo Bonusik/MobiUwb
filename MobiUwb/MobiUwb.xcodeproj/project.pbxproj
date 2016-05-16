@@ -28,9 +28,12 @@
 		23399E241B84A5AD009D674B /* HomeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 23399E231B84A5AD009D674B /* HomeIcon.png */; };
 		234EB5431B85AB6A0023E87D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234EB5421B85AB6A0023E87D /* DataManager.swift */; };
 		234EB5451B85AB9A0023E87D /* MobiUwbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */; };
+		23620C9A1CE8B806001278BB /* ic_action_call.png in Resources */ = {isa = PBXBuildFile; fileRef = 23620C961CE8B806001278BB /* ic_action_call.png */; };
+		23620C9B1CE8B806001278BB /* ic_action_email.png in Resources */ = {isa = PBXBuildFile; fileRef = 23620C971CE8B806001278BB /* ic_action_email.png */; };
+		23620C9C1CE8B806001278BB /* ic_action_fax.png in Resources */ = {isa = PBXBuildFile; fileRef = 23620C981CE8B806001278BB /* ic_action_fax.png */; };
+		23620C9D1CE8B806001278BB /* ic_action_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 23620C991CE8B806001278BB /* ic_action_map.png */; };
 		238016911B8F1D96004E180F /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238016901B8F1D96004E180F /* HeaderTableViewCell.swift */; };
 		238016931B8F3580004E180F /* AutorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 238016921B8F3580004E180F /* AutorIcon.png */; };
-		23ECA81A1C07121300127927 /* license.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8141C07121300127927 /* license.pdf */; };
 		23ECA81B1C07121300127927 /* Author.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8161C07121300127927 /* Author.png */; };
 		23ECA81C1C07121300127927 /* MiT.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8171C07121300127927 /* MiT.png */; };
 		23ECA81D1C07121300127927 /* Supervisor.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8181C07121300127927 /* Supervisor.png */; };
@@ -91,9 +94,12 @@
 		23399E231B84A5AD009D674B /* HomeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeIcon.png; sourceTree = "<group>"; };
 		234EB5421B85AB6A0023E87D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		234EB5441B85AB9A0023E87D /* MobiUwbModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobiUwbModel.swift; sourceTree = "<group>"; };
+		23620C961CE8B806001278BB /* ic_action_call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_call.png; sourceTree = "<group>"; };
+		23620C971CE8B806001278BB /* ic_action_email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_email.png; sourceTree = "<group>"; };
+		23620C981CE8B806001278BB /* ic_action_fax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_fax.png; sourceTree = "<group>"; };
+		23620C991CE8B806001278BB /* ic_action_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_map.png; sourceTree = "<group>"; };
 		238016901B8F1D96004E180F /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		238016921B8F3580004E180F /* AutorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AutorIcon.png; sourceTree = "<group>"; };
-		23ECA8141C07121300127927 /* license.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = license.pdf; sourceTree = "<group>"; };
 		23ECA8161C07121300127927 /* Author.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Author.png; sourceTree = "<group>"; };
 		23ECA8171C07121300127927 /* MiT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MiT.png; sourceTree = "<group>"; };
 		23ECA8181C07121300127927 /* Supervisor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Supervisor.png; sourceTree = "<group>"; };
@@ -185,7 +191,8 @@
 		231A56361B831743003588E3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				23ECA8131C07121300127927 /* AboutIcons */,
+				23ECA8151C07121300127927 /* About */,
+				23ECA8131C07121300127927 /* Contact */,
 				A6B25CFB1B8B4B5E0023E097 /* OpiekunIcon.png */,
 				238016921B8F3580004E180F /* AutorIcon.png */,
 				A6632D411B87096E00C504FD /* mobiUwB.png */,
@@ -266,16 +273,19 @@
 			name = DataManager;
 			sourceTree = "<group>";
 		};
-		23ECA8131C07121300127927 /* AboutIcons */ = {
+		23ECA8131C07121300127927 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				23ECA8141C07121300127927 /* license.pdf */,
-				23ECA8151C07121300127927 /* png */,
+				23620C961CE8B806001278BB /* ic_action_call.png */,
+				23620C971CE8B806001278BB /* ic_action_email.png */,
+				23620C981CE8B806001278BB /* ic_action_fax.png */,
+				23620C991CE8B806001278BB /* ic_action_map.png */,
 			);
+			name = Contact;
 			path = AboutIcons;
 			sourceTree = "<group>";
 		};
-		23ECA8151C07121300127927 /* png */ = {
+		23ECA8151C07121300127927 /* About */ = {
 			isa = PBXGroup;
 			children = (
 				23ECA81F1C07184800127927 /* AuthorW.png */,
@@ -287,7 +297,8 @@
 				23ECA8191C07121300127927 /* Thx.png */,
 				23ECA8211C0718F400127927 /* ThxW.png */,
 			);
-			path = png;
+			name = About;
+			path = AboutIcons/png;
 			sourceTree = "<group>";
 		};
 		CEEF70022A6E02ADE07074D0 /* Frameworks */ = {
@@ -392,8 +403,9 @@
 				A6632D421B87096E00C504FD /* mobiUwB.png in Resources */,
 				A6FB66C71B85C56000DFD7BF /* uwb.png in Resources */,
 				23ECA81E1C07121300127927 /* Thx.png in Resources */,
-				23ECA81A1C07121300127927 /* license.pdf in Resources */,
 				A6B25CFA1B8B48B60023E097 /* ThanksIcon.png in Resources */,
+				23620C9C1CE8B806001278BB /* ic_action_fax.png in Resources */,
+				23620C9D1CE8B806001278BB /* ic_action_map.png in Resources */,
 				231A56591B831EEB003588E3 /* LeftMenuIcon.png in Resources */,
 				A6632D401B87064A00C504FD /* ContactIcon3.png in Resources */,
 				23ECA8201C07184800127927 /* AuthorW.png in Resources */,
@@ -402,9 +414,11 @@
 				23ECA81C1C07121300127927 /* MiT.png in Resources */,
 				23399E221B849EC9009D674B /* ExitProgramIcon.png in Resources */,
 				23ECA81D1C07121300127927 /* Supervisor.png in Resources */,
+				23620C9A1CE8B806001278BB /* ic_action_call.png in Resources */,
 				A6B25CFC1B8B4B5E0023E097 /* OpiekunIcon.png in Resources */,
 				23ECA8221C0718F400127927 /* ThxW.png in Resources */,
 				23ECA8261C07190500127927 /* MiTW.png in Resources */,
+				23620C9B1CE8B806001278BB /* ic_action_email.png in Resources */,
 				A6632D3E1B87050D00C504FD /* ContactIcon2.png in Resources */,
 				23ECA81B1C07121300127927 /* Author.png in Resources */,
 				231A565B1B831F9B003588E3 /* RightMenuIcon.png in Resources */,
@@ -622,8 +636,8 @@
 			baseConfigurationReference = CB7AECA23FD12E5D869588C5 /* Pods-MobiUwb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: egrzegorzszymanski@gmail.com (PWMLCG6UE9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: egrzegorzszymanski@gmail.com (PWMLCG6UE9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = MobiUwb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
@@ -640,7 +654,7 @@
 			baseConfigurationReference = 12F92D9925576AC44B3BB6C5 /* Pods-MobiUwb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = MobiUwb/Info.plist;

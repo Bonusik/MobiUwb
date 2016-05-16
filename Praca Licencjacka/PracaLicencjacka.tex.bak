@@ -708,8 +708,8 @@ W \textit{Objective--C} wymaga się by deklaracja i definicja klasy odbywała si
 @end
 \end{lstlisting}
 
-W sekcji drugiej nazywanej definicją klasy, kod umieszczony w pliku z rozszerzeniem \textit{.m} odpowiedzialny jest za rzeczywiste działanie klasy. Definicje metod umieszczamy między słowem kluczowym \textit{@implementaion} a zamykającym \textit{@end}. W przypadku metody widocznej na listingu\ref{Definicja klasy w Objective-C} by nie wyskoczył błąd przy kompilacji typ parametru wyjściowego musi być taki sam jak w przypadku parametru wejściowego.
-\begin{lstlisting}[label=Definicja klasy w Objective-C, caption=Definicje klasy umieszczamy w pliku .m]
+W sekcji drugiej nazywanej definicją klasy, kod umieszczony w pliku z rozszerzeniem \textit{.m} odpowiedzialny jest za rzeczywiste działanie klasy. Definicje metod umieszczamy między słowem kluczowym \textit{@implementaion} a zamykającym \textit{@end}. W przypadku metody widocznej na listingu \ref{Definicja klasy w Objective-C} by nie wyskoczył błąd przy kompilacji typ parametru wyjściowego musi być taki sam jak w przypadku parametru wejściowego.
+\begin{lstlisting}[label=Definicja klasy w Objective-C, caption=Definicje klasy umieszczamy w pliku \textit{.m}]
 @implementation
 -(typParametruWyjsciowego) metoda2instancji:(typParamteruWejsciowego) nazwaParametruWejsciowego {
 	return ParamertWejsciowy
@@ -724,7 +724,7 @@ NaszaKlasa * nazwaKlasy = [[NaszaKlasa alloc] init];
 
 Obiekty klas powinny mieć wyraźnie zdefiniowane zadania, pozwalające na  wykonywanie określonych czynności takich jak modelowanie konkretnej informacji, wyświetlenia treści, kontrole przepływu informacji. Interfejs klasy definiuje sposoby dzięki którym poprzez spodziewaną interakcje na obiekcie jesteśmy w stanie osiągnąć te czynności. Niekiedy jednak potrzebujemy rozszerzyć funkcjonalność klasy poprzez dodanie nowej metody czy parametru by bardziej odpowiadała naszym potrzebom. Dla przykładu, możemy potrzebować by nasza aplikacja wyświetlała konkretny ciąg znaków kilkanaście razy w różnych miejscach, zamiast tworzyć obiekty za każdym razem gdy będziemy potrzebować tej funkcjonalności możemy wziąć pod uwagę czy nie dodać jej do klasy \textit{NSString} by to ona mogła to wyświetlić ten napis. Stworzenie podklasy dziedziczącej z \textit{NSString} ogranicza tą funkcjonalność i użycie jej type \textit{NSMutableString} będzie już niemożliwe. Zamiast tego \textit{Objective--C} daje nam możliwość dodanie własnych metod do istniejących klas poprzez kategorie i rozszerzenia klas. 
 
-Jeśli potrzebujemy dodać metody do już istniejącej klasy najprostszym sposobem jest dodanie kategorii. Zaczynamy od deklaracji nagłówka wraz z zainicjowaniem metody widocznej w wierszu 5,oraz nazwy kategorii wyszczególnionej w nawiasach obok nazwy klasy widocznej w wierszu 3 listingu\ref{KategoriaNaglowek}.
+Jeśli potrzebujemy dodać metody do już istniejącej klasy najprostszym sposobem jest dodanie kategorii. Zaczynamy od deklaracji nagłówka wraz z zainicjowaniem metody widocznej w wierszu 5,oraz nazwy kategorii wyszczególnionej w nawiasach obok nazwy klasy widocznej w wierszu 3 listingu \ref{KategoriaNaglowek}.
 \begin{lstlisting}[label=KategoriaNaglowek, caption=Deklaracja nowej metody poprzez kategorie]
 #import "Osoba.h"
 
@@ -735,7 +735,7 @@ Jeśli potrzebujemy dodać metody do już istniejącej klasy najprostszym sposob
 
 @end
 \end{lstlisting}
-Następnym krokiem jest zaimplementowanie funkcjonalności naszej metodzie. Przyjęło się by plik kategorii nazywać poprzez połączenie przez "+" nazwę klasy do której dodajemy kategorie oraz nazwę opisującą kategorie widoczną na listingu \ref{KategorieImplementacja} w wierszu 1. Teraz wystarczy tylko zaimportować tę klasę gdy będziemy potrzebowali skorzystać z nowej funkcjonalności.
+Następnym krokiem jest zaimplementowanie funkcjonalności naszej metodzie. Przyjęło się by plik kategorii nazywać poprzez połączenie przez ""+""  nazwę klasy do której dodajemy kategorie oraz nazwę opisującą kategorie widoczną na listingu \ref{KategorieImplementacja} w wierszu 1. Teraz wystarczy tylko zaimportować tę klasę gdy będziemy potrzebowali skorzystać z nowej funkcjonalności.
 \begin{lstlisting}[label=KategorieImplementacja, caption=Definicja metody kategorii]
 #import "Osoba+OsobaWypiszDaneOsobowe.h"
 
@@ -811,11 +811,11 @@ func test() {
 \end{lstlisting}
 Dodano nowe funkcje składniowe, które pomagają pisać bardziej przejrzysty kod, poprawiając jednocześnie jego spójność. Zastosowano w \textit{SDK} nowe funkcjonalności z \textit{Objective-C} takie jak typy generyczne czy wartości \textit{null} adnotacji poprawiające bezpieczeństwo kodu. Niektóre z pozostałych ulepszeń to:
 \begin{itemize}
-\item lepsza kontrola przepływu działania przy pomocy \textit{do},\textit{guard}, \textit{defer} i \textit{repeat}.    
+\item lepsza kontrola przepływu działania przy pomocy \textit{do}, \textit{guard}, \textit{defer} i \textit{repeat}.    
 \item rozszerzenia protokołów i domyślna implementacja.
 \item rozszerzone dopasowanie do wzorca do pracy klauzulą if i pętlą for.
 \end{itemize}
-Wraz z nową wersją pojawiła się informacja, że \textit{Swift} stał się oprogramowaniem \textit{open source}. W tym samym czasie otwarta została strona \textit{Swift.org} z dostępnym kodem, rejestratorem błędów i systematycznymi wersjami developerskimi dla każdego. Na razie \textit{Swift} obsługuje platformy \textit{Apple} oraz \textit{Linux} ale pracują na resztą platform.
+Wraz z nową wersją pojawiła się informacja, że \textit{Swift} stał się oprogramowaniem \textit{open source}. W tym samym czasie otwarta została strona \footnote{Swift.org} z dostępnym kodem, rejestratorem błędów i systematycznymi wersjami deweloperskimi dla każdego. Na razie \textit{Swift} obsługuje platformy \textit{Apple} oraz \textit{Linux} ale pracują na resztą platform.
 
 Częścią wspólną dla zmiennych i stałych jest nazwa oraz wartość przechowywane określonego typu. Wartość stałej raz zainicjowanej nie może zostać zmieniona, w przeciwieństwie do zmiennych gdzie wartość może zostać zmieniona wielokrotnie. Podstawową zasadą jest by zadeklarować zmienne lub stałe przed próbą ich użycia. Słowem kluczowym za zadeklarowania stałej w języku \textit{Swift} odpowiada \textit{let}, zaś zmiennej \textit{var} widoczne na listingu \ref{StaleIZmienne}. Dobrym zwyczajem jest by właściwie deklarować stałe i zmienne, co nie tylko sprawia, że nasz kod jest bezpieczniejszy ale świadczy o znajomości pisanego przez nas kodu.
 \begin{lstlisting}[label=StaleIZmienne, caption=Deklaracja stałych i zmiennych w Swift]
@@ -825,7 +825,7 @@ var zmiennaX = 10
 \end{lstlisting}
 W języku \textit{Swift} bardzo rzadko jesteśmy zmuszeni to definiowania typu po zainicjowaniu wartości dla zmiennej lub stałej. Prawie zawsze \textit{Swift} jest w stanie sam wywnioskować typ po wartości.
 
-Funkcje są samodzielnymi kawałkami, które odpowiadają za wykonanie konkretnego zadania. Nazywamy funkcje zgodnie z jej wykonywanym zadaniem i wywołujemy tą nazwę w miejscu gdzie te konkretne zadanie ma być wykonane. Składnia funkcji w \textit{Swift} jest na tyle elastyczna, aby wyrazić wszystko, od prostych funkcji w stylu języka \textit{C} bez nazw parametrów wejściowych do kompleksowych metod \textit{Objective-C} z lokalnymi i zewnętrznymi nazwami dla każdego parametru. Możemy podać dla parametrów wejściowych wartości domyślne w celu uproszczenia wywołań funkcji lub użyć parametrów \textit{in--out}, które mogą być przekazane poza funkcje ze zmodyfikowanymi wartościami.
+Funkcje są samodzielnymi kawałkami, które odpowiadają za wykonanie konkretnego zadania. Nazywamy funkcje zgodnie z jej wykonywanym zadaniem i wywołujemy tą nazwę w miejscu gdzie te konkretne zadanie ma być wykonane. Składnia funkcji w \textit{Swift} jest na tyle elastyczna, aby wyrazić wszystko, od prostych funkcji w stylu języka \textit{C} bez nazw parametrów wejściowych do kompleksowych metod \textit{Objective-C} z lokalnymi i zewnętrznymi nazwami dla każdego parametru. Możemy podać dla parametrów wejściowych wartości domyślne w celu uproszczenia wywołań funkcji lub użyć parametrów \textit{in-out}, które mogą być przekazane poza funkcje ze zmodyfikowanymi wartościami.
 \begin{lstlisting}[label=Funkcje, caption=Definicja funkcji w języku Swift]
 func przywitajSieZ(imieOsoby: String) -> String {
 	
@@ -841,8 +841,8 @@ Funkcja widoczna na listingu \ref{Funkcje} nosi nazwę \textit{przywitajSieZ(\_:
 	print(przywitajSieZ("Kamil")) // "Witaj, Kamil!"
 \end{center}
 
-\textit{Swift} dostarcza trzy główne typy kolekcji, tablice, słownik oraz zbiór do przechowywania elementów. Tablice są uporządkowaną kolekcja danych, zbiór natomiast nieuporządkowana kolekcją unikatowych danych, zaś słownik nieuporządkowaną kolekcją typu klucz--wartość. W żadnej z tych kolekcji nie możemy wstawić wartości o różnych typach, daje nam to pewność, że wartość którą chcemy odzyskać z kolekcji jest określonego typu. 
-W \textit{Objective--C} jeśli zależało nam na strukturze, która raz zainicjowana elementami nie zostanie zmieniona byliśmy zmuszeni do użycia kolekcji o innej nazwie i funkcjonalności od struktury, która pozwalała na taką zmianę. W języku \textit{Swift} słowami kluczowymi oznaczającymi czy kolekcje możemy modyfikować lub nie, odpowiadają tak jak w przypadku zmiennych i stałych, \textit{let} i \textit{var.}
+\textit{Swift} dostarcza trzy główne typy kolekcji, tablice, słownik oraz zbiór do przechowywania elementów. Tablice są uporządkowaną kolekcja danych, zbiór natomiast nieuporządkowana kolekcją unikatowych danych, zaś słownik nieuporządkowaną kolekcją typu klucz-wartość. W żadnej z tych kolekcji nie możemy wstawić wartości o różnych typach, daje nam to pewność, że wartość którą chcemy odzyskać z kolekcji jest określonego typu. 
+W \textit{Objective-C} jeśli zależało nam na strukturze, która raz zainicjowana elementami nie zostanie zmieniona byliśmy zmuszeni do użycia kolekcji o innej nazwie i funkcjonalności od struktury, która pozwalała na taką zmianę. W języku \textit{Swift} słowami kluczowymi oznaczającymi czy kolekcje możemy modyfikować lub nie, odpowiadają tak jak w przypadku zmiennych i stałych, \textit{let} i \textit{var.}
 Pełna nazwa typu tablicy w \textit{Swift} piszemy \textit{Array<Element>}, gdzie \textit{Element} oznacza typ wartości dozwolony do przechowania w tej tablicy. Możemy także skorzystać ze skróconej wersji pisząc tylko \textit{[Element]}. Obydwie formy działają identycznie, choć wersja skrócona jest preferowana. 
 \begin{center}
 	var tablicaIntow = [Int]()
@@ -879,7 +879,7 @@ Ostatnią kolekcją dostępną w \textit{Swift} jest słownik przechowujący zwi
 \end{center}
 Definicja tworzy pusty słownik przechowujący jako klucz kod pocztowy dla miasta jako wartości. Przykładowe przypisane do istniejącego już słownika wyglądało by następująco:  
 \begin{center}
-	kodyPocztoweMiejscowosci = ["18-300": "Zambrów", "16-010": "Nowodworce", "12524": "Berlin", "20355": "Hamburg"]
+	kodyPocztoweMiejscowosci = ["18-300": ""Zambrów"", "16-010": ""Nowodworce"", "12524": "Berlin", "20355": "Hamburg"]
 \end{center}
 Do iteracji po słowniku możemy wykorzystać strukturę zwaną \textit{tuple} oraz pętle for widoczną za listing \ref{IteracjaPoSlowniku}
 \begin{lstlisting}[label=IteracjaPoSlowniku, caption=Iteracja po słowniku z wykorzystaniem \textit{tuple} i pętli for.]
