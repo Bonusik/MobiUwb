@@ -105,13 +105,13 @@ class ContactsViewController: UIViewController, MFMailComposeViewControllerDeleg
     }
 
     @IBAction func localizationButtonPressed(sender: UIButton) {
-        let lat1 : NSString = self.contactInformation["latitude"]!
-        let lng1 : NSString = self.contactInformation["longitude"]!
+        let lat1 : NSString = self.contactInformation["longitude"]!
+        let lng1 : NSString = self.contactInformation["latitude"]!
         
         let latitute:CLLocationDegrees =  lat1.doubleValue
         let longitute:CLLocationDegrees =  lng1.doubleValue
         
-        let regionDistance:CLLocationDistance = 10000
+        let regionDistance:CLLocationDistance = 5000
         let coordinates = CLLocationCoordinate2DMake(latitute, longitute)
         let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
         let options = [
