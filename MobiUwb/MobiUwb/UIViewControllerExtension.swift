@@ -19,6 +19,14 @@ extension UIViewController {
         self.slideMenuController()?.removeRightGestures()
         self.slideMenuController()?.addLeftGestures()
         self.slideMenuController()?.addRightGestures()
+        let navigation = self.navigationController?.navigationBar
+        navigation!.barTintColor = UIColor.init(red: 42/256, green: 42/256, blue: 42/256, alpha: 1)
+        navigation!.translucent = false
+        navigation!.tintColor = UIColor.whiteColor()
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigation!.titleTextAttributes = (titleDict as! [String : AnyObject])
+//        let verticalConstraint = NSLayoutConstraint(item: navigation!, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 10)
+//        view.addConstraint(verticalConstraint)
  
     }
     
