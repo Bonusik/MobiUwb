@@ -13,6 +13,7 @@ enum RightMenu:Int {
     case Home = 0
     case Contacts
     case AboutProgram
+    case Settings
 }
 
 protocol RightMenuProtocol: class {
@@ -24,10 +25,11 @@ class RightMenuController: UIViewController, RightMenuProtocol {
     
     
     @IBOutlet weak var tableView: UITableView!
-    var menus = [("Home","Home-100"),("Contacts","ContactIcon3"),("About Program","AboutProgramIcon2")]
+    var menus = [("Home","Home-100"),("Contacts","ContactIcon3"),("About Program","AboutProgramIcon2"),("Settings", "settings")]
     var mainViewController: UIViewController!
     var contactsViewController: UIViewController!
     var aboutProgramViewController: UIViewController!
+    var settingsViewController:UIViewController!
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -36,7 +38,6 @@ class RightMenuController: UIViewController, RightMenuProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
         self.tableView.tableFooterView = UIView(frame:CGRectZero)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
    
@@ -45,6 +46,9 @@ class RightMenuController: UIViewController, RightMenuProtocol {
         
         let aboutProgramViewController = storyboard.instantiateViewControllerWithIdentifier("AboutProgramViewController") as! AboutProgramViewController
         self.aboutProgramViewController = UINavigationController(rootViewController: aboutProgramViewController)
+        
+        let settingsViewController = storyboard.instantiateViewControllerWithIdentifier("SettingsViewController") as! SettingsViewController
+        self.settingsViewController = UINavigationController(rootViewController: settingsViewController)
         
         self.tableView.registerCellClass(BaseTableViewCell.self)
     }
@@ -63,6 +67,8 @@ class RightMenuController: UIViewController, RightMenuProtocol {
         
         cell.label.text = menus[indexPath.row].0
         cell.iconImageView.image = UIImage(named: menus[indexPath.row].1)
+        cell.iconImageView.image = cell.iconImageView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        cell.iconImageView.tintColor = UIColor.whiteColor()
 
         return cell
     }
@@ -81,6 +87,8 @@ class RightMenuController: UIViewController, RightMenuProtocol {
             self.slideMenuController()?.changeMainViewController(self.contactsViewController, close: true)
         case .AboutProgram:
             self.slideMenuController()?.changeMainViewController(self.aboutProgramViewController, close: true)
+        case .Settings:
+            self.slideMenuController()?.changeMainViewController(self.settingsViewController, close: true)
         }
     }
     

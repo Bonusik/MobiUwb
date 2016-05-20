@@ -34,6 +34,11 @@
 		23620C9D1CE8B806001278BB /* ic_action_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 23620C991CE8B806001278BB /* ic_action_map.png */; };
 		238016911B8F1D96004E180F /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238016901B8F1D96004E180F /* HeaderTableViewCell.swift */; };
 		238016931B8F3580004E180F /* AutorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 238016921B8F3580004E180F /* AutorIcon.png */; };
+		239E19E81CEC6EE700CE9047 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 239E19E71CEC6EE700CE9047 /* settings.png */; };
+		239E19EA1CEC71AD00CE9047 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E19E91CEC71AD00CE9047 /* SettingsViewController.swift */; };
+		239E19EC1CEC8A6A00CE9047 /* ic_checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 239E19EB1CEC8A6A00CE9047 /* ic_checkbox.png */; };
+		239E19EE1CEC8A7000CE9047 /* ic_uncheckbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 239E19ED1CEC8A7000CE9047 /* ic_uncheckbox.png */; };
+		239E19F01CEE2E8F00CE9047 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E19EF1CEE2E8F00CE9047 /* Announcement.swift */; };
 		23ECA81B1C07121300127927 /* Author.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8161C07121300127927 /* Author.png */; };
 		23ECA81C1C07121300127927 /* MiT.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8171C07121300127927 /* MiT.png */; };
 		23ECA81D1C07121300127927 /* Supervisor.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8181C07121300127927 /* Supervisor.png */; };
@@ -100,6 +105,11 @@
 		23620C991CE8B806001278BB /* ic_action_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_map.png; sourceTree = "<group>"; };
 		238016901B8F1D96004E180F /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		238016921B8F3580004E180F /* AutorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AutorIcon.png; sourceTree = "<group>"; };
+		239E19E71CEC6EE700CE9047 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		239E19E91CEC71AD00CE9047 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		239E19EB1CEC8A6A00CE9047 /* ic_checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_checkbox.png; sourceTree = "<group>"; };
+		239E19ED1CEC8A7000CE9047 /* ic_uncheckbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_uncheckbox.png; sourceTree = "<group>"; };
+		239E19EF1CEE2E8F00CE9047 /* Announcement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		23ECA8161C07121300127927 /* Author.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Author.png; sourceTree = "<group>"; };
 		23ECA8171C07121300127927 /* MiT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MiT.png; sourceTree = "<group>"; };
 		23ECA8181C07121300127927 /* Supervisor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Supervisor.png; sourceTree = "<group>"; };
@@ -175,6 +185,7 @@
 		231A56351B831743003588E3 /* MobiUwb */ = {
 			isa = PBXGroup;
 			children = (
+				239E19EF1CEE2E8F00CE9047 /* Announcement.swift */,
 				234EB5411B85AB440023E87D /* DataManager */,
 				23399E181B846788009D674B /* View */,
 				23399E121B846568009D674B /* Extension */,
@@ -206,6 +217,9 @@
 				A6632D3D1B87050D00C504FD /* ContactIcon2.png */,
 				A6632D3F1B87064A00C504FD /* ContactIcon3.png */,
 				23399E1D1B849D22009D674B /* ContactIcon.png */,
+				239E19E71CEC6EE700CE9047 /* settings.png */,
+				239E19EB1CEC8A6A00CE9047 /* ic_checkbox.png */,
+				239E19ED1CEC8A7000CE9047 /* ic_uncheckbox.png */,
 				A6632D3B1B87042400C504FD /* AboutProgramIcon2.png */,
 				23399E1F1B849D34009D674B /* AboutProgramIcon.png */,
 				231A565A1B831F9B003588E3 /* RightMenuIcon.png */,
@@ -234,6 +248,7 @@
 		23399E081B845B06009D674B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				239E19E91CEC71AD00CE9047 /* SettingsViewController.swift */,
 				231A563A1B831743003588E3 /* MainViewController.swift */,
 				A6FB66BE1B85B9B000DFD7BF /* InstInfViewController.swift */,
 				A6FB66BC1B85A7A300DFD7BF /* LeftMenuController.swift */,
@@ -406,11 +421,13 @@
 				A6B25CFA1B8B48B60023E097 /* ThanksIcon.png in Resources */,
 				23620C9C1CE8B806001278BB /* ic_action_fax.png in Resources */,
 				23620C9D1CE8B806001278BB /* ic_action_map.png in Resources */,
+				239E19EE1CEC8A7000CE9047 /* ic_uncheckbox.png in Resources */,
 				231A56591B831EEB003588E3 /* LeftMenuIcon.png in Resources */,
 				A6632D401B87064A00C504FD /* ContactIcon3.png in Resources */,
 				23ECA8201C07184800127927 /* AuthorW.png in Resources */,
 				231A563E1B831743003588E3 /* Main.storyboard in Resources */,
 				231A56431B831744003588E3 /* LaunchScreen.xib in Resources */,
+				239E19E81CEC6EE700CE9047 /* settings.png in Resources */,
 				23ECA81C1C07121300127927 /* MiT.png in Resources */,
 				23399E221B849EC9009D674B /* ExitProgramIcon.png in Resources */,
 				23ECA81D1C07121300127927 /* Supervisor.png in Resources */,
@@ -421,6 +438,7 @@
 				23620C9B1CE8B806001278BB /* ic_action_email.png in Resources */,
 				A6632D3E1B87050D00C504FD /* ContactIcon2.png in Resources */,
 				23ECA81B1C07121300127927 /* Author.png in Resources */,
+				239E19EC1CEC8A6A00CE9047 /* ic_checkbox.png in Resources */,
 				231A565B1B831F9B003588E3 /* RightMenuIcon.png in Resources */,
 				A6632D3A1B87035100C504FD /* Home-100.png in Resources */,
 				23399E201B849D34009D674B /* AboutProgramIcon.png in Resources */,
@@ -498,6 +516,7 @@
 				23399E1C1B847EE3009D674B /* UIViewControllerExtension.swift in Sources */,
 				A6FB66BF1B85B9B000DFD7BF /* InstInfViewController.swift in Sources */,
 				231A56391B831743003588E3 /* AppDelegate.swift in Sources */,
+				239E19EA1CEC71AD00CE9047 /* SettingsViewController.swift in Sources */,
 				23399E0D1B845D4A009D674B /* RightMenuController.swift in Sources */,
 				23399E1A1B8467B2009D674B /* BaseTableViewCell.swift in Sources */,
 				238016911B8F1D96004E180F /* HeaderTableViewCell.swift in Sources */,
@@ -506,6 +525,7 @@
 				23399E0F1B846275009D674B /* ContactsViewController.swift in Sources */,
 				23399E141B8465BF009D674B /* UITableViewExtension.swift in Sources */,
 				234EB5451B85AB9A0023E87D /* MobiUwbModel.swift in Sources */,
+				239E19F01CEE2E8F00CE9047 /* Announcement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,19 +25,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
         rightViewController.mainViewController = nvc
+      
         
         let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
-        
+
         self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
         self.window?.rootViewController = slideMenuController
         self.window?.makeKeyAndVisible()
+        
     }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         self.createMenuView()
-        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+//        let announcement = AnnouncementManager.sharedInstance
+//        print(announcement.areTheyNewAnnouncementsInCategory("io"))
         return true
     }
 
