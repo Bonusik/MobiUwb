@@ -40,8 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.createMenuView()
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-//        let announcement = AnnouncementManager.sharedInstance
-//        print(announcement.areTheyNewAnnouncementsInCategory("io"))
+
+        let announcement = AnnouncementManager.sharedInstance
+        print(announcement.areTheyNewAnnouncementsInCategory("io"))
+            
         return true
     }
 

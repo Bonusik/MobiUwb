@@ -1,14 +1,11 @@
 //
 //  DataManager.swift
-//  TopApps
+//  
 //
 
 
 import Foundation
 import SwiftyJSON
-
-let MobiUrlAktualnosci = "http://ii.uwb.edu.pl/serwis/?/json/io"
-let MobiUrlZajeciaOdwolane = "http://ii.uwb.edu.pl/serwis/?/json/sz"
 
 class DataManager {
   

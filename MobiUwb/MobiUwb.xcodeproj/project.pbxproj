@@ -38,7 +38,7 @@
 		239E19EA1CEC71AD00CE9047 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E19E91CEC71AD00CE9047 /* SettingsViewController.swift */; };
 		239E19EC1CEC8A6A00CE9047 /* ic_checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 239E19EB1CEC8A6A00CE9047 /* ic_checkbox.png */; };
 		239E19EE1CEC8A7000CE9047 /* ic_uncheckbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 239E19ED1CEC8A7000CE9047 /* ic_uncheckbox.png */; };
-		239E19F01CEE2E8F00CE9047 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E19EF1CEE2E8F00CE9047 /* Announcement.swift */; };
+		239E19F01CEE2E8F00CE9047 /* AnnouncementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E19EF1CEE2E8F00CE9047 /* AnnouncementManager.swift */; };
 		23ECA81B1C07121300127927 /* Author.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8161C07121300127927 /* Author.png */; };
 		23ECA81C1C07121300127927 /* MiT.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8171C07121300127927 /* MiT.png */; };
 		23ECA81D1C07121300127927 /* Supervisor.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8181C07121300127927 /* Supervisor.png */; };
@@ -109,7 +109,7 @@
 		239E19E91CEC71AD00CE9047 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		239E19EB1CEC8A6A00CE9047 /* ic_checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_checkbox.png; sourceTree = "<group>"; };
 		239E19ED1CEC8A7000CE9047 /* ic_uncheckbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_uncheckbox.png; sourceTree = "<group>"; };
-		239E19EF1CEE2E8F00CE9047 /* Announcement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
+		239E19EF1CEE2E8F00CE9047 /* AnnouncementManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementManager.swift; sourceTree = "<group>"; };
 		23ECA8161C07121300127927 /* Author.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Author.png; sourceTree = "<group>"; };
 		23ECA8171C07121300127927 /* MiT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MiT.png; sourceTree = "<group>"; };
 		23ECA8181C07121300127927 /* Supervisor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Supervisor.png; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		231A56351B831743003588E3 /* MobiUwb */ = {
 			isa = PBXGroup;
 			children = (
-				239E19EF1CEE2E8F00CE9047 /* Announcement.swift */,
+				239E19EF1CEE2E8F00CE9047 /* AnnouncementManager.swift */,
 				234EB5411B85AB440023E87D /* DataManager */,
 				23399E181B846788009D674B /* View */,
 				23399E121B846568009D674B /* Extension */,
@@ -525,7 +525,7 @@
 				23399E0F1B846275009D674B /* ContactsViewController.swift in Sources */,
 				23399E141B8465BF009D674B /* UITableViewExtension.swift in Sources */,
 				234EB5451B85AB9A0023E87D /* MobiUwbModel.swift in Sources */,
-				239E19F01CEE2E8F00CE9047 /* Announcement.swift in Sources */,
+				239E19F01CEE2E8F00CE9047 /* AnnouncementManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

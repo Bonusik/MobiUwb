@@ -37,7 +37,8 @@ class AnnouncementManager {
         
         var parsedJsonData = [MobiUwbModel]()
         let categoryURL = "http://ii.uwb.edu.pl/serwis/?/json/"+category
-        DataManager.getDataFrom("http://ii.uwb.edu.pl/mobi/config.xml")  { (MobiUwbData) -> Void in
+        
+        DataManager.getDataFrom(categoryURL)  { (MobiUwbData) -> Void in
             let json = JSON(data: MobiUwbData)
             if let unparsedJsonData = json.array {
                 

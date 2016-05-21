@@ -8,14 +8,13 @@
 
 import UIKit
 
+
 class MainViewController: UIViewController {
 
     @IBOutlet weak var WebView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-           // print(DataManager.checkForNewInformation(parsedJsonData, lastCheckDate: "2016-05-19T11:31:14Z"))
         
     }
     
@@ -27,8 +26,6 @@ class MainViewController: UIViewController {
         let URL = NSURL(string: "http://ii.uwb.edu.pl/mobi/?place=ii&client=android")
         WebView.loadRequest(NSURLRequest(URL: URL!))
         WebView.scrollView.bounces = false;
-        let announcement = AnnouncementManager.sharedInstance
-        print(announcement.areTheyNewAnnouncementsInCategory("io"))
   
     }
 
