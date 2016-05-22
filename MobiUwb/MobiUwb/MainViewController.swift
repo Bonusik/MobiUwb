@@ -15,7 +15,14 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let an = AnnouncementManager.sharedInstance
+            an.sendNotificationIfNewAnnouncementsInCategory("io")
+        var notification:UILocalNotification = UILocalNotification()
+        notification.alertTitle = "Nowe informacje:"
+        notification.alertBody = "Aktulanosc, Zajecia odwolane"
+        notification.fireDate = NSDate(timeIntervalSinceNow: 12)
+        notification.soundName = UILocalNotificationDefaultSoundName
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
     override func viewWillAppear(animated: Bool) {

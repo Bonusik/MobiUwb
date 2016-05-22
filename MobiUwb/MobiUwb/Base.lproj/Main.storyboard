@@ -261,19 +261,6 @@
                                             <action selector="planButtonPressed:" destination="09b-hk-4yH" eventType="touchUpInside" id="CJ1-Ox-mEt"/>
                                         </connections>
                                     </button>
-                                    <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Whk-DN-L3T">
-                                        <rect key="frame" x="238" y="91" width="100" height="144"/>
-                                        <color key="backgroundColor" red="0.20066968600000001" green="0.200643987" blue="0.20066968600000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="exf-Ra-ilI"/>
-                                            <constraint firstAttribute="height" constant="144" id="obJ-2L-aVi"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="dataSource" destination="09b-hk-4yH" id="ZP5-pz-SBy"/>
-                                            <outlet property="delegate" destination="09b-hk-4yH" id="Oh3-AD-onZ"/>
-                                        </connections>
-                                    </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG9-30-sc2">
                                         <rect key="frame" x="468" y="10" width="100" height="34"/>
                                         <constraints>
@@ -291,7 +278,6 @@
                                 <color key="backgroundColor" red="0.20066968600000001" green="0.200643987" blue="0.20066968600000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="r70-yA-hNI" firstAttribute="top" secondItem="PG9-30-sc2" secondAttribute="bottom" constant="7" id="0y4-hZ-E8I"/>
-                                    <constraint firstItem="Whk-DN-L3T" firstAttribute="centerX" secondItem="L3m-au-Gyg" secondAttribute="centerX" id="1DJ-nb-IoY"/>
                                     <constraint firstAttribute="trailing" secondItem="Vgo-Vm-pBo" secondAttribute="trailing" constant="8" id="1Jr-6c-tib"/>
                                     <constraint firstItem="Vgo-Vm-pBo" firstAttribute="top" secondItem="bxl-i4-B0q" secondAttribute="bottom" constant="15" id="4IF-Pm-3vh"/>
                                     <constraint firstItem="M8R-5c-44T" firstAttribute="top" secondItem="ny5-gC-Cpg" secondAttribute="bottom" constant="8" id="4Va-Ug-vFV"/>
@@ -307,7 +293,6 @@
                                     <constraint firstItem="UFI-Ww-Iyp" firstAttribute="top" secondItem="vmK-od-PXs" secondAttribute="bottom" constant="8" id="RoD-n9-7sV"/>
                                     <constraint firstAttribute="height" constant="325" id="Ukt-hR-PP2"/>
                                     <constraint firstItem="ny5-gC-Cpg" firstAttribute="top" secondItem="L3m-au-Gyg" secondAttribute="top" constant="8" id="WBd-70-PwP"/>
-                                    <constraint firstItem="Whk-DN-L3T" firstAttribute="centerY" secondItem="L3m-au-Gyg" secondAttribute="centerY" id="XCP-FU-WEw"/>
                                     <constraint firstItem="vmK-od-PXs" firstAttribute="top" secondItem="M8R-5c-44T" secondAttribute="bottom" constant="8" id="XPU-fe-lze"/>
                                     <constraint firstItem="UFI-Ww-Iyp" firstAttribute="leading" secondItem="L3m-au-Gyg" secondAttribute="leading" constant="8" id="YoD-Ia-PIK"/>
                                     <constraint firstItem="ld0-sT-C6h" firstAttribute="top" secondItem="siK-rj-erW" secondAttribute="bottom" constant="8" id="ceh-QH-HXM"/>
@@ -323,9 +308,24 @@
                                     <constraint firstAttribute="trailing" secondItem="GO8-9n-zWK" secondAttribute="trailing" constant="8" id="zOK-SL-Flb"/>
                                 </constraints>
                             </view>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Whk-DN-L3T">
+                                <rect key="frame" x="250" y="446" width="100" height="144"/>
+                                <color key="backgroundColor" red="0.20066968600000001" green="0.200643987" blue="0.20066968600000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="exf-Ra-ilI"/>
+                                    <constraint firstAttribute="height" constant="144" id="obJ-2L-aVi"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="09b-hk-4yH" id="ZP5-pz-SBy"/>
+                                    <outlet property="delegate" destination="09b-hk-4yH" id="Oh3-AD-onZ"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.16117030283684211" green="0.16119600184999999" blue="0.16063062356052632" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="oNY-GI-Eou" firstAttribute="top" secondItem="Whk-DN-L3T" secondAttribute="bottom" constant="10" id="1ni-KS-tQZ"/>
+                            <constraint firstItem="Whk-DN-L3T" firstAttribute="centerX" secondItem="8Zr-Fr-P0N" secondAttribute="centerX" id="2vE-xS-a3t"/>
                             <constraint firstItem="za1-1g-872" firstAttribute="top" secondItem="hBZ-Oi-42F" secondAttribute="bottom" constant="8" id="4uY-SO-MPw"/>
                             <constraint firstAttribute="trailing" secondItem="L3m-au-Gyg" secondAttribute="trailing" constant="8" id="4vE-v3-aR3"/>
                             <constraint firstAttribute="trailing" secondItem="za1-1g-872" secondAttribute="trailing" constant="8" id="5OR-kN-CKg"/>
@@ -336,9 +336,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="aktualnosciButton" destination="r70-yA-hNI" id="WNN-Gu-3V5"/>
+                        <outlet property="biuroButton" destination="bxl-i4-B0q" id="Esr-Fg-f6l"/>
                         <outlet property="moreSettingsView" destination="L3m-au-Gyg" id="yZL-vE-J4l"/>
+                        <outlet property="notificationSwitch" destination="za1-1g-872" id="VVW-YW-tqD"/>
+                        <outlet property="planButton" destination="GO8-9n-zWK" id="uuR-Dq-nEM"/>
+                        <outlet property="sprawyButton" destination="p6f-VJ-hnu" id="STD-nd-rHo"/>
+                        <outlet property="szkoleniaButton" destination="Vgo-Vm-pBo" id="ggI-tJ-PDS"/>
                         <outlet property="timeButton" destination="PG9-30-sc2" id="5Dw-4T-TEv"/>
                         <outlet property="timePicker" destination="Whk-DN-L3T" id="eOz-4n-8QN"/>
+                        <outlet property="zajeciaButton" destination="zNK-gO-bF4" id="ZzE-gD-Rat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxN-Ox-6K7" userLabel="First Responder" sceneMemberID="firstResponder"/>

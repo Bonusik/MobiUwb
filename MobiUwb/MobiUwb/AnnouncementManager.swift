@@ -8,39 +8,45 @@
 
 import Foundation
 import SwiftyJSON
+import Alamofire
 
 class AnnouncementManager {
     
     static let sharedInstance = AnnouncementManager()
     
+    
    private init() {
 
     }
     
-    func areTheyNewAnnouncementsInCategory(category:String) -> Bool {
+    func sendNotificationIfNewAnnouncementsInCategory(category:String) {
         
-        let lastAnnouncement:NSDate = parseAnnouncementDate(dateOfLastAnnouncementsOfCategory(category))
         
-        let lastCheckedDate:NSDate = NSDate()
-        
-        let compare = lastAnnouncement.compare(lastCheckedDate)
-        
-        if compare == .OrderedDescending {
-            return true
-        }else{
-            return false
+        dateOfLastAnnouncementsOfCategory(category) { completion in
+            if let lastAnnouncementDate = self.parseAnnouncementDate(completion) {
+                let lastCheckedDate = self.parseAnnouncementDate("2015-06-12T11:31:14Z")//NSDate()
+                let compare = lastAnnouncementDate.compare(lastCheckedDate!)
+                if compare == .OrderedDescending {
+                    print("YES")
+                } else {
+                    print("NO")
+                }
+            }
+            
         }
-        
+
     }
     
-    func dateOfLastAnnouncementsOfCategory(category:String)->String {
+    func dateOfLastAnnouncementsOfCategory(category:String,completion:(String?)->Void){
         
-        var parsedJsonData = [MobiUwbModel]()
         let categoryURL = "http://ii.uwb.edu.pl/serwis/?/json/"+category
         
-        DataManager.getDataFrom(categoryURL)  { (MobiUwbData) -> Void in
-            let json = JSON(data: MobiUwbData)
+        Alamofire.request(.GET, categoryURL).responseJSON { response in
+            var lastAnnouncement:String?
+            var parsedJsonData = [MobiUwbModel]()
+            let json = JSON(response.result.value!)
             if let unparsedJsonData = json.array {
+                
                 
                 for dataJson in unparsedJsonData {
                     
@@ -53,20 +59,24 @@ class AnnouncementManager {
                 }
                 
             }
-        }
-        return parsedJsonData[0].data
-        
+            lastAnnouncement = parsedJsonData[0].data
+            completion(lastAnnouncement)
+
+            }
     }
     
-    func parseAnnouncementDate(date: String) -> NSDate {
+    func parseAnnouncementDate(date: String?) -> NSDate? {
         
+        if let newDate = date {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
         dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
         
-        let parsedDate = dateFormatter.dateFromString(date)
-        
-        return parsedDate!
+        let parsedDate = dateFormatter.dateFromString(newDate)
+            return parsedDate
+        } else {
+            return nil
+        }
         
     }
 }

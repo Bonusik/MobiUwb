@@ -15,11 +15,22 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var timePicker: UIPickerView!
     @IBOutlet weak var timeButton: UIButton!
     
+    @IBOutlet weak var aktualnosciButton: UIButton!
+    @IBOutlet weak var zajeciaButton: UIButton!
+    @IBOutlet weak var sprawyButton: UIButton!
+    @IBOutlet weak var biuroButton: UIButton!
+    @IBOutlet weak var szkoleniaButton: UIButton!
+    @IBOutlet weak var planButton: UIButton!
+    
+    @IBOutlet weak var notificationSwitch: UISwitch!
+    
+    
     let pickerData = ["1 min.","10 min.","30 min.", "1 godz.", "2 godz.", "6 godz.", "12 godz.", "1 dzień"]
     let userDefault = NSUserDefaults.standardUserDefaults()
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewSettings()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -29,7 +40,31 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
     }
     
-    
+    func setupViewSettings() {
+        func initialButtonIcon(button:UIButton, setting:Bool?) {
+            if setting == nil{
+                button.setImage(UIImage(named: "ic_checkbox.png"), forState: UIControlState.Normal)
+            } else if setting == true{
+                button.setImage(UIImage(named: "ic_checkbox.png"), forState: UIControlState.Normal)
+            } else if setting == false {
+               button.setImage(UIImage(named: "ic_uncheckbox.png"), forState: UIControlState.Normal)
+            }
+        }
+        let buttons = ["aktualnosci":aktualnosciButton,"zajecia":zajeciaButton,"sprawy":sprawyButton,"biuro":biuroButton,"szkolenia":szkoleniaButton,"plan":planButton]
+        for button in buttons {
+           let check = userDefault.boolForKey(button.0)
+            initialButtonIcon(button.1, setting: check)
+        }
+        let userPermission = UIApplication.sharedApplication().currentUserNotificationSettings()
+        if userPermission?.types != UIUserNotificationType.None {
+            notificationSwitch.on = true
+            moreSettingsView.hidden = false
+        } else {
+            notificationSwitch.on = false
+        }
+        
+        
+    }
     
     //MARK:-
     //MARK:Button handlers
@@ -87,7 +122,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         } else if userSetting == true {
             button.setImage(UIImage(named: "ic_uncheckbox.png"), forState: UIControlState.Normal)
             userDefault.setBool(false, forKey: setting)
-        } else {
+        } else if userSetting == nil{
             button.setImage(UIImage(named: "ic_checkbox.png"), forState: UIControlState.Normal)
             userDefault.setBool(true, forKey: setting)
         }

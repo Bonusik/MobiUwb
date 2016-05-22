@@ -7,6 +7,7 @@
 import Foundation
 import SwiftyJSON
 
+
 class DataManager {
   
   class func loadDataFromURL(url: NSURL, completion:(data: NSData?, error: NSError?) -> Void) {
@@ -37,6 +38,5 @@ class DataManager {
             }
         })
     }
-
     
 }
