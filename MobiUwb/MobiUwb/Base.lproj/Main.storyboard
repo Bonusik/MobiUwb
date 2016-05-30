@@ -173,15 +173,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plan zajęć" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58O-Zq-ASi">
-                                        <rect key="frame" x="8" y="260" width="78" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="2yj-JD-jRc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r70-yA-hNI" userLabel="AktualnosciButton">
                                         <rect key="frame" x="541" y="51" width="27" height="27"/>
                                         <constraints>
@@ -248,19 +239,6 @@
                                             <action selector="szkoleniaButtonPressed:" destination="09b-hk-4yH" eventType="touchUpInside" id="xjd-md-eSk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO8-9n-zWK" userLabel="PlanButton">
-                                        <rect key="frame" x="541" y="263" width="27" height="27"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="27" id="18c-Vk-JOe"/>
-                                            <constraint firstAttribute="width" constant="27" id="weY-ag-RFl"/>
-                                        </constraints>
-                                        <state key="normal" image="ic_checkbox.png">
-                                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="planButtonPressed:" destination="09b-hk-4yH" eventType="touchUpInside" id="CJ1-Ox-mEt"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG9-30-sc2">
                                         <rect key="frame" x="468" y="10" width="100" height="34"/>
                                         <constraints>
@@ -281,14 +259,12 @@
                                     <constraint firstAttribute="trailing" secondItem="Vgo-Vm-pBo" secondAttribute="trailing" constant="8" id="1Jr-6c-tib"/>
                                     <constraint firstItem="Vgo-Vm-pBo" firstAttribute="top" secondItem="bxl-i4-B0q" secondAttribute="bottom" constant="15" id="4IF-Pm-3vh"/>
                                     <constraint firstItem="M8R-5c-44T" firstAttribute="top" secondItem="ny5-gC-Cpg" secondAttribute="bottom" constant="8" id="4Va-Ug-vFV"/>
-                                    <constraint firstItem="GO8-9n-zWK" firstAttribute="top" secondItem="Vgo-Vm-pBo" secondAttribute="bottom" constant="15" id="87N-Ze-qQd"/>
                                     <constraint firstItem="siK-rj-erW" firstAttribute="leading" secondItem="L3m-au-Gyg" secondAttribute="leading" constant="8" id="8kR-DB-tS5"/>
                                     <constraint firstItem="PG9-30-sc2" firstAttribute="top" secondItem="L3m-au-Gyg" secondAttribute="top" constant="10" id="CB1-QQ-96R"/>
                                     <constraint firstAttribute="trailing" secondItem="bxl-i4-B0q" secondAttribute="trailing" constant="8" id="CIX-eM-QfA"/>
                                     <constraint firstItem="ld0-sT-C6h" firstAttribute="leading" secondItem="L3m-au-Gyg" secondAttribute="leading" constant="8" id="COi-dB-lcu"/>
                                     <constraint firstItem="bxl-i4-B0q" firstAttribute="top" secondItem="p6f-VJ-hnu" secondAttribute="bottom" constant="15" id="DOn-I8-85J"/>
                                     <constraint firstItem="siK-rj-erW" firstAttribute="top" secondItem="UFI-Ww-Iyp" secondAttribute="bottom" constant="8" id="EWc-hb-hd2"/>
-                                    <constraint firstItem="58O-Zq-ASi" firstAttribute="top" secondItem="ld0-sT-C6h" secondAttribute="bottom" constant="8" id="NEZ-ZS-hUF"/>
                                     <constraint firstItem="vmK-od-PXs" firstAttribute="leading" secondItem="L3m-au-Gyg" secondAttribute="leading" constant="8" id="RC2-cW-txs"/>
                                     <constraint firstItem="UFI-Ww-Iyp" firstAttribute="top" secondItem="vmK-od-PXs" secondAttribute="bottom" constant="8" id="RoD-n9-7sV"/>
                                     <constraint firstAttribute="height" constant="325" id="Ukt-hR-PP2"/>
@@ -297,7 +273,6 @@
                                     <constraint firstItem="UFI-Ww-Iyp" firstAttribute="leading" secondItem="L3m-au-Gyg" secondAttribute="leading" constant="8" id="YoD-Ia-PIK"/>
                                     <constraint firstItem="ld0-sT-C6h" firstAttribute="top" secondItem="siK-rj-erW" secondAttribute="bottom" constant="8" id="ceh-QH-HXM"/>
                                     <constraint firstItem="ny5-gC-Cpg" firstAttribute="leading" secondItem="L3m-au-Gyg" secondAttribute="leading" constant="8" id="ezQ-nj-ArE"/>
-                                    <constraint firstItem="58O-Zq-ASi" firstAttribute="leading" secondItem="L3m-au-Gyg" secondAttribute="leading" constant="8" id="j99-f8-P6w"/>
                                     <constraint firstAttribute="trailing" secondItem="zNK-gO-bF4" secondAttribute="trailing" constant="8" id="jcf-zI-wop"/>
                                     <constraint firstAttribute="trailing" secondItem="p6f-VJ-hnu" secondAttribute="trailing" constant="8" id="jua-e7-V9j"/>
                                     <constraint firstItem="M8R-5c-44T" firstAttribute="leading" secondItem="L3m-au-Gyg" secondAttribute="leading" constant="8" id="mEK-dG-zuc"/>
@@ -305,7 +280,6 @@
                                     <constraint firstAttribute="trailing" secondItem="r70-yA-hNI" secondAttribute="trailing" constant="8" id="pPF-wT-t17"/>
                                     <constraint firstItem="p6f-VJ-hnu" firstAttribute="top" secondItem="zNK-gO-bF4" secondAttribute="bottom" constant="15" id="tCs-cp-6yO"/>
                                     <constraint firstItem="zNK-gO-bF4" firstAttribute="top" secondItem="r70-yA-hNI" secondAttribute="bottom" constant="17" id="wiw-u2-EKs"/>
-                                    <constraint firstAttribute="trailing" secondItem="GO8-9n-zWK" secondAttribute="trailing" constant="8" id="zOK-SL-Flb"/>
                                 </constraints>
                             </view>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Whk-DN-L3T">
@@ -340,7 +314,6 @@
                         <outlet property="biuroButton" destination="bxl-i4-B0q" id="Esr-Fg-f6l"/>
                         <outlet property="moreSettingsView" destination="L3m-au-Gyg" id="yZL-vE-J4l"/>
                         <outlet property="notificationSwitch" destination="za1-1g-872" id="VVW-YW-tqD"/>
-                        <outlet property="planButton" destination="GO8-9n-zWK" id="uuR-Dq-nEM"/>
                         <outlet property="sprawyButton" destination="p6f-VJ-hnu" id="STD-nd-rHo"/>
                         <outlet property="szkoleniaButton" destination="Vgo-Vm-pBo" id="ggI-tJ-PDS"/>
                         <outlet property="timeButton" destination="PG9-30-sc2" id="5Dw-4T-TEv"/>

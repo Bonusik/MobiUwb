@@ -20,7 +20,6 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var sprawyButton: UIButton!
     @IBOutlet weak var biuroButton: UIButton!
     @IBOutlet weak var szkoleniaButton: UIButton!
-    @IBOutlet weak var planButton: UIButton!
     
     @IBOutlet weak var notificationSwitch: UISwitch!
     
@@ -50,7 +49,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                button.setImage(UIImage(named: "ic_uncheckbox.png"), forState: UIControlState.Normal)
             }
         }
-        let buttons = ["aktualnosci":aktualnosciButton,"zajecia":zajeciaButton,"sprawy":sprawyButton,"biuro":biuroButton,"szkolenia":szkoleniaButton,"plan":planButton]
+        let buttons = ["aktualnosci":aktualnosciButton,"zajecia":zajeciaButton,"sprawy":sprawyButton,"biuro":biuroButton,"szkolenia":szkoleniaButton]
         for button in buttons {
            let check = userDefault.boolForKey(button.0)
             initialButtonIcon(button.1, setting: check)
@@ -91,6 +90,28 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         timeButton.setTitle(timeString, forState: UIControlState.Normal)
         
     }
+    func conversToSeconds(string: String)->Double?{
+        switch string {
+        case "1 min.":
+            return 60.0
+        case "10 min.":
+            return 600.0
+        case "30 min.":
+            return 1800.0
+        case "1 godz.":
+            return 3600.0
+        case "2 godz.":
+            return 7200.0
+        case "6 godz.":
+            return 21600.0
+        case "12 godz.":
+            return 43200.0
+        case "1 dzień":
+            return 86400.0
+        default:
+           return nil
+        }
+    }
     
     @IBAction func aktualnosciButtonPressed(sender: UIButton) {
         changeImageForButton(sender, setting: "aktualnosci")
@@ -111,9 +132,6 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         changeImageForButton(sender, setting: "szkolenia")
     }
     
-    @IBAction func planButtonPressed(sender: UIButton) {
-        changeImageForButton(sender, setting: "plan")
-    }
     func changeImageForButton(button: UIButton, setting: String) {
         let userSetting:Bool? = userDefault.boolForKey(setting)
         if userSetting == false {
@@ -147,5 +165,9 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         updateTimeButton()
+        if let frequency = conversToSeconds(pickerData[row]) {
+            userDefault.setDouble(frequency, forKey: "czestotliwosc")
+        }
+        
     }
 }

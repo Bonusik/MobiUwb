@@ -1,11 +1,12 @@
 \documentclass{iiuwb}
 \usepackage[polish]{babel}
 \usepackage{enumerate}
-\usepackage{graphicx}
 \usepackage{indentfirst}
 \usepackage{listings}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 
- 
 \lstdefinestyle{mystyle}{
     basicstyle=\footnotesize,
     breakatwhitespace=false,         
@@ -19,6 +20,11 @@
     showtabs=false,                  
     tabsize=2,
 }
+
+\lstnewenvironment{code}[1][]%
+  {\noindent\minipage{\linewidth}\medskip 
+   \lstset{basicstyle=\ttfamily\footnotesize,frame=single,#1}}
+  {\endminipage}
  
 \lstset{style=mystyle}
  
@@ -576,7 +582,7 @@ Struktura daty odpowiada za przedstawienie daty zgodnej ze standardem internetow
 
 \section{Mobilny system operacyjny}
 Mobilny system operacyjny jest oprogramowaniem pozwalającym innym programom zwanym aplikacjami uruchamiać się na urządzeniach przenośnych takich jak telefony komórkowe, smartfony czy tablety. Przez ostatnie lata projekt mobilnych systemów operacyjnych przeszedł trzy fazową ewolucję:  z systemu opartego na komputerach PC do systemów komputerowych specjalnego przeznaczenia, aby zakończyć na obecnie  obowiązującym systemie zorientowanym na smartfony. W całym procesie przemiany zmiany nastąpiły także w architekturze mobilnych systemów ze skomplikowanej przez mniej złożoną do czegoś pośrodku. Naturalnie cały proces ewolucyjny napędzany jest przez postęp technologiczny w trzech dziedzinach. Sprzęcie komputerowym, gdzie przemysł zmniejszył rozmiar mikroprocesorów i urządzeń peryferyjnych pozwalający na stworzenie dzisiejszych urządzeń mobilnych. Przed tymi zmianami nie było możliwe osiągnięcie tak wysokiej wydajności przy tak małych gabarytach. Drugą dziedziną jest oprogramowanie, które w komputerach przenośnych jest skoncentrowane na produktywności użytkownika, dlatego też wsparcie dla myszki i klawiatury było sprawą kluczową. Oprogramowanie na urządzenia mobilne pozwalały jedynie na zarządzanie kontaktami, wysyłanie wiadomości tekstowych itd. Przy czym korzystanie z tych niewielu funkcjonalności bez obsługi ekranu dotykowego zawierało stosunkowo dużo czasu i ograniczało produktywność. Ostatnią dziedziną, która miała wpływ na rozwój mobilnego systemu operacyjnego jest Internet. Wraz z rozwojem Internetu w szczególności po Web 2.0, istnieje masa informacji w sieci, którą trzeba wydobyć, przeszukać, zorganizować i dostarczyć do użytkownika. Ludzie coraz częściej żyją w internecie zamiast po prostu przeglądać zawarte w nim informacje.
-Powyższy rozwój technologiczny zaowocował wieloma konkurencyjnymi systemami operacyjnymi dostarczone przez różne firmy, takie jak \textit{Android} od \textit{Google'a}, \textit{iOS Apple'a}, \textit{Windows Phone Microsoftu} czy \textit{BlackBerry OS} od \textit{RIM}.
+Powyższy rozwój technologiczny zaowocował wieloma konkurencyjnymi systemami operacyjnymi dostarczone przez różne firmy, takie jak \textit{Android} od \textit{Google}, \textit{iOS Appla}, \textit{Windows Phone Microsoftu} czy \textit{BlackBerry OS} od \textit{RIM}.
 
 \subsection{Charakterystyka iOS}
 Mobilny system operacyjny \textit{iOS} został stworzony w 2007 roku jeszcze pod nazwą iPhone OS przez firmę \textit{Apple Inc.} wyłącznie na urządzenia tejże firmy. Jest komercyjnym system opartym na ogólnie dostępnym rdzeniu systemu \textit{Darwin}. Jak większość obecnych systemów operacyjnych, \textit{iOS} używa interfejsu graficznego jednakże jest to system przeznaczony na urządzenia mobilne i zaprojektowany pod kątem sterowania dotykiem takim jak przeciąganie palcem po ekranie, czy pojedyncze stuknięcie. Gesty takie pozwalają na intuicyjną kontrole nad elementami interfejsu czy przeprowadzenia różnorakich operacji. Wbudowane w urządzenie akcelerometry obsługują dodatkowo gesty typu potrząsanie czy obracanie urządzenia.
@@ -589,12 +595,12 @@ Mobilny system operacyjny \textit{iOS} został stworzony w 2007 roku jeszcze pod
 \end{figure}
 Architektura systemu \textit{iOS}  widoczna na rysunku \ref{fig:Architektura iOS} wywodzi się z \textit{Mac OS X}  oraz na przenośnym interfejsie systemu operacyjnego \textit{UNIX}. Stworzony jest na bazie czterech warstw abstrakcji: \textit{Core OS}, \textit{Core Services}, \textit{Media Services}, \textit{Cocoa Touch}.
 
-\textit{Core OS} jest jądrem systemu operacyjnego, czyli bazowa warstwa systemu obsługująca bezpośrednio sprzęt. Odpowiedzialna jest między innymi za przetwarzanie obrazów, Bluetooth, dźwięk, DNS (ang. Domain Name System), prywatne lub publiczne klucze, system obsługujący wątki, zarządzanie pamięcią.
+\textit{Core OS} jest jądrem systemu operacyjnego, czyli bazowa warstwa systemu obsługująca bezpośrednio sprzęt. Odpowiedzialna jest między innymi za przetwarzanie obrazów, bluetooth, dźwięk, DNS, prywatne/publiczne klucze, system obsługujący wątki, zarządzanie pamięcią.
 
-\textit{Core Services} -- podstawowe usługi systemowe, które są podzielone na rożne biblioteki napisane w języku C i \textit{Objective-C}. Najważniejszymi bibliotekami przekazanymi w \textit{Core Services} są:
+\textit{Core Services} - podstawowe usługi systemowe, które są podzielone na rożne biblioteki napisane w języku C i \textit{Objective-C}. Najważniejszymi bibliotekami przekazanymi w \textit{Core Services} są:
 \begin{itemize}
 \item \textbf{Foundation Framework} -- Podstawowa biblioteka stosowana w \textit{Objective-C} zawierająca zestawy klas przyśpieszające prace z językiem. Klasy tej biblioteki zaczynają się od liter \textit{NS} co jest skrótem od nazwy systemu \textit{NextStep}.
-\item \textbf{Core Foundation Framework} -- biblioteka oparta na języku programowania C i pozwala na pracę z typami danych, kolekcjami oraz obsługę tekstowego typu znaków.
+\item \textbf{Core Foundation Framework} - biblioteka oparta na języku programowania C i pozwala na pracę z typami danych, kolekcjami oraz obsługę tekstowego typu znaków.
 \item \textbf{Core Data Framework} -- biblioteka, która pozwala na zarządzanie modelem przechowywania danych. Zapewnia ogólne i automatyczne rozwiązanie typowych zadań związanych cyklem życia obiektów, zarządzanie wykresem obiektów, zapewnia sprawdzanie czy dane mają poprawne typy, sprawdza spójność między relacjami.
 \item \textbf{Core Location Framework} -- rejestruje informacje o położeniu przy pomocy GPS czy sieci WiFi.
 \end{itemize} 
@@ -616,11 +622,11 @@ Wraz z nowym system \textit{iPad} zyskał możliwość obsługiwania dwóch apli
 \end{itemize}
 Obojętnie które z tych nowych funkcjonalności użyjemy, developer piszący aplikacje  musi sprawdzić czy urządzenie jest kompatybilne z funkcją \textit{3D Touch},na ten moment jedynie modele 6s i 6s Plus obsługują ten dodatek.
 
-\textit{App Thining} jest nowym rozwiązaniem firmy \textit{Apple} by użytkownicy ściągali tylko takie komponenty aplikacji potrzebne do jej uruchomienia jakie odpowiadają konkretnemu typowi urządzenia. Np. urządzenia typu IPhone (4s, 5, 5s, 6) ściągać będą tylko grafiki odpowiadające temu typowi zamiast pobierać dodatkowe elementy potrzebne dla urządzeń typu \textit{HD} np. IPad, co skutkować będzie mniejszymi aplikacjami, szybszym ściąganiem i zadowolonymi użytkownikami. Wraz z środowiskiem Xcode 7 mamy możliwość przesłania aplikacji do \textit{iTunes} w pośrednim stanie zwanym Bitcode. W stanie takim kiedy użytkownik będzie chciał pobrać aplikacje, App Store automatycznie stworzy optymalną wersje tej aplikacji(jeśli potrzebna wersje 64--bitową) do pasującego urządzenia\footnote{\url{https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html} czas dostępu: 2016-04-21}. 
+\textit{App Thining} jest nowym rozwiązaniem firmy \textit{Apple} by użytkownicy ściągali tylko takie komponenty aplikacji potrzebne do jej uruchomienia jakie odpowiadają konkretnemu typowi urządzenia. Np. urządzenia typu IPhone (4s, 5, 5s, 6) ściągać będą tylko grafiki odpowiadające temu typowi zamiast pobierać dodatkowe elementy potrzebne dla urządzeń typu \textit{HD} np. IPad, co skutkować będzie mniejszymi aplikacjami, szybszym ściąganiem i zadowolonymi użytkownikami. Wraz z środowiskiem Xcode 7 mamy możliwość przesłania aplikacji do \textit{iTunes} w pośrednim stanie zwanym Bitcode. W stanie takim kiedy użytkownik będzie chciał pobrać aplikacje, App Store automatycznie stworzy optymalną wersje tej aplikacji(jeśli potrzebna wersje 64--bitową) do pasującego urządzenia\footnote{\url{https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html} czas dostępu:2016-04-21}. 
 
 
 \section{Środowisko programistyczne Xcode}
-\textit{Xcode} jest zintegrowanym środowiskiem programistycznym (ang. \textit{Integrated Development Environment}, IDE), inaczej zestawem narzędzi developerskich potrzebnych do stworzenia aplikacji (w szczególności edytor tekstu, kompilator, narzędzie do debugowania, emulator urządzeń iOS), łączy wszystko w jeden pakiet oprogramowania zamiast kilka odrębnym narzędzi połączonych ze sobą skryptem. \textit{Xcode} jest też oficjalnym IDE \textit{Apple'a} do programowania aplikacji na Mac oraz iOS. Pierwotnie znany był jako \textit{Project Builder} w czasach kiedy jeszcze firma Apple istniała pod nazwą \textit{NeXT}, wraz z systemem operacyjnym Mac OS X 10.3 zmieniono nazwę na \textit{Xcode}. Zapewnia wsparcie dla języków programowania takich jak C, C++, Objective-C, Objective-C++, Java, AppleScript, Python, Ruby, Rez oraz Swift, dopuszcza także kompilację w modelach programowania \textit{Cocoa}, \textit{Carbon} i Java.
+\textit{Xcode} jest zintegrowanym środowiskiem programistycznym (ang. \textit{Integrated Development Environment}, IDE), inaczej zestawem narzędzi developerskich potrzebnych do stworzenia aplikacji (w szczególności edytor tekstu, kompilator, narzędzie do debugowania, emulator urządzeń iOS), łączy wszystko w jeden pakiet oprogramowania zamiast kilka odrębnym narzędzi połączonych ze sobą skryptem. \textit{Xcode} jest też oficjalnym IDE \textit{Apple'a} do programowania aplikacji na Mac oraz iOS. Pierwotnie znany był jako \textit{Project Builder} w czasach kiedy jeszcze firma Apple istniała pod nazwą \textit{NeXT}, wraz z systemem operacyjnym Mac OS X 10.3 zmieniono nazwę na \textit{Xcode} . Zapewnia wsparcie dla języków programowania takich jak C, C++, Objective-C, Objective-C++, Java, AppleScript, Python, Ruby, Rez oraz Swift, dopuszcza także kompilację w modelach programowania \textit{Cocoa}, \textit{Carbon} i Java.
 \begin{figure}[!th]
 \centering
 \includegraphics[scale=.5]{image/XcodeOknoPowitalne.png}
@@ -639,14 +645,14 @@ Okno widoczne na rysunku \ref{fig:XcodeOknoPowitalne} jest pierwszym oknem pojaw
 
 Rysunek \ref{fig:XcodeOknoPowitalne} przedstawia cztery obszary umożliwiające sprawną pracę nad tworzonym projektem. Obszar nawigacyjny daje dostęp do plików, klas, testów czy diagnostyki. Pasek nawigacyjny widoczny na rysunku \ref{fig:XcodeNavigationBar} umożliwia nam:
 \begin{itemize}
-\item \textbf{Projekt navigator} -- dodaje, usuwa, grupuje i zarządza plikami projektu. Pozwala na zaznaczeniu interesującego nas pliku i wyświetlenie w obszarze edytora. 
-\item \textbf{Symbol navigator} -- wyświetla wszystkie klasy projektu jako listę lub hierarchie.
-\item \textbf{Find navigator} -- pozwala na wyszukanie ciągu znaków w projekcie. 
-\item \textbf{Issue navigator} -- pokazuje diagnostykę, ostrzeżenia, błędy, które pojawiają się po zbudowaniu projektu.
-\item \textbf{Test navigator} -- tworzy, zarządza i uruchamia test aplikacji.
-\item \textbf{Debug navigator} -- daje możliwość obsługiwania podstawowych narzędzi do debugowania.
-\item \textbf{Breakpoint navigator} -- wyświetla wszystkie ustawione punkty przerwania oraz wbudowane opcje np. wyłapujące wszystkie wyjątki.
-\item \textbf{Report navigator} -- umożliwia przeglądanie logów tworzonych podczas działania programu jak również uruchamiania aplikacji.
+\item \textbf{Projekt navigator} -- Dodaje, usuwa, grupuje i zarządza plikami projektu. Pozwala na zaznaczeniu interesującego nas pliku i wyświetlenie w obszarze edytora. 
+\item \textbf{Symbol navigator} -- Wyświetla wszystkie klasy projektu jako listę lub hierarchie.
+\item \textbf{Find navigator} -- Pozwala na wyszukanie ciągu znaków w projekcie. 
+\item \textbf{Issue navigator} -- Pokazuje diagnostykę, ostrzeżenia, błędy, które pojawiają się po zbudowaniu projektu.
+\item \textbf{Test navigator} -- Tworzy, zarządza i uruchamia test aplikacji.
+\item \textbf{Debug navigator} -- Daje możliwość obsługiwania podstawowych narzędzi do debugowania.
+\item \textbf{Breakpoint navigator} -- Wyświetla wszystkie ustawione punkty przerwania oraz wbudowane opcje np. wyłapujące wszystkie wyjątki.
+\item \textbf{Report navigator} -- Umożliwia przeglądanie logów tworzonych podczas działania programu jak również uruchamiania aplikacji.
 \end{itemize}
 \begin{figure}[!th]
 \centering
@@ -661,9 +667,9 @@ Obszar narzędziowy możemy podzielić na dwa odrębne panele. Pierwszy z nich u
 
 Ostatnim z obszarów z których zbudowane jest okno programu \textit{Xcode} jest obszar debuggera. Kontroluje on wykonanie naszego kodu, wyświetla utworzone zmienne czy wyjściowe parametry w konsoli. Składa się z trzech głównych komponentów:
 \begin{itemize}
-\item \textbf{Pasek debuggera} -- kontroluje wykonywanie się aplikacji i zapewnia nawigację po kodzie źródłowym. 
-\item \textbf{Sektor widoku zmiennych} -- wyświetla informacje na temat elementów zaznaczonych na pasku debuggera.
-\item \textbf{Sektor konsoli} -- zawiera interaktywny terminal.
+\item \textbf{Pasek debuggera} -- Kontroluje wykonywanie się aplikacji i zapewnia nawigację po kodzie źródłowym. 
+\item \textbf{Sektor widoku zmiennych} -- Wyświetla informacje na temat elementów zaznaczonych na pasku debuggera.
+\item \textbf{Sektor konsoli} -- Zawiera interaktywny terminal.
 \end{itemize}
 
 \begin{figure}[!th]
@@ -687,11 +693,11 @@ Język programowania, informatyczne narzędzie do formułowania programów dla k
 
 Składnia języka programowania jest najczęściej definiowana za pomocą gramatyki bezkontekstowej (gramatyka formalna), w której można wygodnie opisać zagnieżdżone struktury (np. instrukcje złożone, wyrażenia arytmetyczne z nawiasami); dodatkowe warunki składniowe, których nie można zdefiniować w ten sposób (np. wymaganie, aby funkcje użyte w programie były w nim zdefiniowane), są najczęściej zapisywane w języku naturalnym. Semantyka jest zwykle opisywana tekstem w języku naturalnym, choć można ją określić w sposób w pełni precyzyjny i formalny, np. podając reguły tłumaczenia konstrukcji języka programowania na ciąg operacji pewnego hipotetycznego komputera (semantyka operacyjna) albo określając sposób konstruowania funkcji przekształcającej dane wejściowe programu w jego wyniki (semantyka denotacyjna)\footnote{\url{http://encyklopedia.pwn.pl/haslo/jezyk-programowania;3917948.html} czas dostępu:2016-04-21}. 
 \subsection{Objective-C}
-\textit{Objective--C} jest jednym z dwóch języków programowania używanym do tworzenia oprogramowania na platformy OS X, iOS czy watchOS. Pochodzi on od języka C i dziedziczy takie elementy jak np. składania, typy prymitywne oraz instrukcje sterujące, co więcej kod poprawnie napisany języku C jest kompatybilny i zgodny z językiem \textit{Objective--C}, choć rozszerzony jest o możliwości programowania obiektowego pochodzące od \textit{Smaltalka}.
-W 1988 firma \textit{NeXT Software} wykupiła licencje do tego języka i wypuściła bibliotekę opartą o język \textit{Objective--C} pod nazwą \textit{NeXTSTEP}. Kiedy firma \textit{Apple} została właścicielem \textit{NeXT}, bibliotekę wbudowano w jądro systemów operacyjnych \textit{Mac OS X}, zapewniając tym sposobem nowoczesny fundament OS, którego \textit{Apple} nie było w stanie zapewnić we własnym zakresie.
+\textit{Objective-C} jest jednym z dwóch języków programowania używanym do tworzenia oprogramowania na platformy OS X, iOS czy watchOS. Pochodzi on od języka C i dziedziczy takie elementy jak np. składania, typy prymitywne oraz instrukcje sterujące, co więcej kod poprawnie napisany języku C jest kompatybilny i zgodny z językiem \textit{Objective-C}, choć rozszerzony jest o możliwości programowania obiektowego pochodzące od \textit{Smaltalka}.
+W 1988 firma \textit{NeXT Software} wykupiła licencje do tego języka i wypuściła bibliotekę opartą o język \textit{Objective-C} pod nazwą \textit{NeXTSTEP}. Kiedy firma \textit{Apple} została właścicielem \textit{NeXT}, bibliotekę wbudowano w jądro systemów operacyjnych \textit{Mac OS X}, zapewniając tym sposobem nowoczesny fundament OS, którego \textit{Apple} nie było w stanie zapewnić we własnym zakresie.
 
-W \textit{Objective--C} wymaga się by deklaracja i definicja klasy odbywała się w dwóch odrębnych plikach. Przyjęło się by deklarację umieszczać w pliku nagłówkowym z rozszerzeniem .h i między słowem kluczowym \textit{@interface} oraz zamykającym \textit{@end} widoczne na listingu \ref{Deklaracja klasy w Objective-C}. Zadeklarowana klasa posiada dwa parametry typu NSObject(klasy bazowej większości klas języka \textit{Objective--C}), przedrostek NS wymienionych typów parametrów pochodzi od biblioteki \textit{NeXTSTEP}, która została wspomniana wcześniej. Od wiersza 6 do 12 widoczne są metody klasy oraz metody instancji, \textit{"+"} oznacza metodę klasy, dzięki niej nie potrzebujemy tworzyć instancji klasy by wywołać tą metodę. Drugi rodzaj metody operuje na stworzonym obiekcie danej klasy.
-\begin{lstlisting}[label=Deklaracja klasy w Objective-C, caption=Deklaracje klasy umieszczamy w pliku  \textit{.h}]
+W \textit{Objective-C} wymaga się by deklaracja i definicja klasy odbywała się w dwóch odrębnych plikach. Przyjęło się by deklarację umieszczać w pliku nagłówkowym z rozszerzeniem .h i między słowem kluczowym \textit{@interface} oraz zamykającym \textit{@end} widoczne na listingu \ref{Deklaracja klasy w Objective-C}. Zadeklarowana klasa posiada dwa parametry typu NSObject(klasy bazowej większości klas języka \textit{Objective-C}), przedrostek NS wymienionych typów parametrów pochodzi od biblioteki \textit{NeXTSTEP}, która została wspomniana wcześniej. Od wiersza 6 do 12 widoczne są metody klasy oraz metody instancji, \textit{"+"} oznacza metodę klasy, dzięki niej nie potrzebujemy tworzyć instancji klasy by wywołać tą metodę. Drugi rodzaj metody operuje na stworzonym obiekcie danej klasy.
+\begin{lstlisting}[label=Deklaracja klasy w Objective-C, caption=Deklaracje klasy w Objective-C umieszczamy w pliku z rozszerzeniem .h]
 @interface NazwaKLasy: klasaNadrzedna {
 	NSObject *parametr1Klasy
 	NSObject *parametr2Klasy
@@ -708,8 +714,8 @@ W \textit{Objective--C} wymaga się by deklaracja i definicja klasy odbywała si
 @end
 \end{lstlisting}
 
-W sekcji drugiej nazywanej definicją klasy, kod umieszczony w pliku z rozszerzeniem \textit{.m} odpowiedzialny jest za rzeczywiste działanie klasy. Definicje metod umieszczamy między słowem kluczowym \textit{@implementaion} a zamykającym \textit{@end}. W przypadku metody widocznej na listingu \ref{Definicja klasy w Objective-C} by nie wyskoczył błąd przy kompilacji typ parametru wyjściowego musi być taki sam jak w przypadku parametru wejściowego.
-\begin{lstlisting}[label=Definicja klasy w Objective-C, caption=Definicje klasy umieszczamy w pliku \textit{.m}]
+W sekcji drugiej nazywanej definicją klasy, kod umieszczony w pliku z rozszerzeniem \textit{.m} odpowiedzialny jest za rzeczywiste działanie klasy. Definicje metod umieszczamy między słowem kluczowym \textit{@implementaion} a zamykającym \textit{@end}. W przypadku metody widocznej na listingu\ref{Definicja klasy w Objective-C} by nie wyskoczył błąd przy kompilacji typ parametru wyjściowego musi być taki sam jak w przypadku parametru wejściowego.
+\begin{lstlisting}[label=Definicja klasy w Objective-C, caption=Definicje klasy w Objective-C umieszczamy w pliku z rozszerzeniem .m]
 @implementation
 -(typParametruWyjsciowego) metoda2instancji:(typParamteruWejsciowego) nazwaParametruWejsciowego {
 	return ParamertWejsciowy
@@ -722,9 +728,9 @@ Zazwyczaj do stworzenie obiektu danej klasy potrzebujemy dwóch metod. Pierwsza 
 NaszaKlasa * nazwaKlasy = [[NaszaKlasa alloc] init];
 \end{lstlisting}
 
-Obiekty klas powinny mieć wyraźnie zdefiniowane zadania, pozwalające na  wykonywanie określonych czynności takich jak modelowanie konkretnej informacji, wyświetlenia treści, kontrole przepływu informacji. Interfejs klasy definiuje sposoby dzięki którym poprzez spodziewaną interakcje na obiekcie jesteśmy w stanie osiągnąć te czynności. Niekiedy jednak potrzebujemy rozszerzyć funkcjonalność klasy poprzez dodanie nowej metody czy parametru by bardziej odpowiadała naszym potrzebom. Dla przykładu, możemy potrzebować by nasza aplikacja wyświetlała konkretny ciąg znaków kilkanaście razy w różnych miejscach, zamiast tworzyć obiekty za każdym razem gdy będziemy potrzebować tej funkcjonalności możemy wziąć pod uwagę czy nie dodać jej do klasy \textit{NSString} by to ona mogła to wyświetlić ten napis. Stworzenie podklasy dziedziczącej z \textit{NSString} ogranicza tą funkcjonalność i użycie jej type \textit{NSMutableString} będzie już niemożliwe. Zamiast tego \textit{Objective--C} daje nam możliwość dodanie własnych metod do istniejących klas poprzez kategorie i rozszerzenia klas. 
+Obiekty klas powinny mieć wyraźnie zdefiniowane zadania, pozwalające na  wykonywanie określonych czynności takich jak modelowanie konkretnej informacji, wyświetlenia treści, kontrole przepływu informacji. Interfejs klasy definiuje sposoby dzięki którym poprzez spodziewaną interakcje na obiekcie jesteśmy w stanie osiągnąć te czynności. Niekiedy jednak potrzebujemy rozszerzyć funkcjonalność klasy poprzez dodanie nowej metody czy parametru by bardziej odpowiadała naszym potrzebom. Dla przykładu, możemy potrzebować by nasza aplikacja wyświetlała konkretny ciąg znaków kilkanaście razy w różnych miejscach, zamiast tworzyć obiekty za każdym razem gdy będziemy potrzebować tej funkcjonalności możemy wziąć pod uwagę czy nie dodać jej do klasy \textit{NSString} by to ona mogła to wyświetlić ten napis. Stworzenie podklasy dziedziczącej z \textit{NSString} ogranicza tą funkcjonalność i użycie jej type \textit{NSMutableString} będzie już niemożliwe. Zamiast tego \textit{Objective-C} daje nam możliwość dodanie własnych metod do istniejących klas poprzez kategorie i rozszerzenia klas. 
 
-Jeśli potrzebujemy dodać metody do już istniejącej klasy najprostszym sposobem jest dodanie kategorii. Zaczynamy od deklaracji nagłówka wraz z zainicjowaniem metody widocznej w wierszu 5,oraz nazwy kategorii wyszczególnionej w nawiasach obok nazwy klasy widocznej w wierszu 3 listingu \ref{KategoriaNaglowek}.
+Jeśli potrzebujemy dodać metody do już istniejącej klasy najprostszym sposobem jest dodanie kategorii. Zaczynamy od deklaracji nagłówka wraz z zainicjowaniem metody widocznej w wierszu 5,oraz nazwy kategorii wyszczególnionej w nawiasach obok nazwy klasy widocznej w wierszu 3 listingu\ref{KategoriaNaglowek}.
 \begin{lstlisting}[label=KategoriaNaglowek, caption=Deklaracja nowej metody poprzez kategorie]
 #import "Osoba.h"
 
@@ -735,7 +741,7 @@ Jeśli potrzebujemy dodać metody do już istniejącej klasy najprostszym sposob
 
 @end
 \end{lstlisting}
-Następnym krokiem jest zaimplementowanie funkcjonalności naszej metodzie. Przyjęło się by plik kategorii nazywać poprzez połączenie przez ""+""  nazwę klasy do której dodajemy kategorie oraz nazwę opisującą kategorie widoczną na listingu \ref{KategorieImplementacja} w wierszu 1. Teraz wystarczy tylko zaimportować tę klasę gdy będziemy potrzebowali skorzystać z nowej funkcjonalności.
+Następnym krokiem jest zaimplementowanie funkcjonalności naszej metodzie. Przyjęło się by plik kategorii nazywać poprzez połączenie przez "+" nazwę klasy do której dodajemy kategorie oraz nazwę opisującą kategorie widoczną na listingu \ref{KategorieImplementacja} w wierszu 1. Teraz wystarczy tylko zaimportować tę klasę gdy będziemy potrzebowali skorzystać z nowej funkcjonalności.
 \begin{lstlisting}[label=KategorieImplementacja, caption=Definicja metody kategorii]
 #import "Osoba+OsobaWypiszDaneOsobowe.h"
 
@@ -795,7 +801,7 @@ static int dodajLiczby(int pierwsza, int druga) {
 \end{lstlisting}
 Trzeba pamiętać by słowo kluczowe \textit{static} było użyte przy deklaracji i implementacji.
 \subsection{Swift}
-Swift \cite{Lassoff:2014:Swift} to opracowany przez \textit{Apple'a} nowy język programowania, który ma być przyjazny i łatwy w użyciu. Został zaprojektowany z uwzględnieniem filozofii łatwości użycia i szybkości działania języków skryptowych, a jednocześnie oferuje potężne możliwości charakterystyczne dla języków kompilowanych.  Opracowany przez \textit{Apple'a} język \textit{Swift} został zaprezentowany w roku 2014, od tamtej chwili jest zintegrowany z \textit{Xcode} i pozwala na tworzenie aplikacji na platformy OS X, iOS oraz watchOS. 
+Swift \cite{Lassoff:2014:Swift} to opracowany przez \textit{Apple'a} nowy język programowania, który ma być przyjazny i łatwy w użyciu. Został zaprojektowany z uwzględnieniem filozofii łatwości użycia i szybkości działania języków skryptowych, a jednocześnie oferuje potężne możliwości charakterystyczne dla języków kompilowanych.	 Opracowany przez \textit{Apple'a} język \textit{Swift} został zaprezentowany w roku 2014, od tamtej chwili jest zintegrowany z \textit{Xcode} i pozwala na tworzenie aplikacji na platformy OS X, iOS oraz watchOS. 
 
 W chwili pisania tej pracy \textit{Swift} dostępny jest w wersji 2.2 i wraz z nowym wydaniem wprowadzono kilka istotnych zmian poprawiających prace. Zdecydowano się na nowy model obsługi błędów widoczny na listingu \ref{ObslugaBledow}, który ma dostarczyć jasną i przejrzystą składnie obsługującą błędy. Nowy model błędów, który pozwala na stworzenie własnych typów błędu, został zaprojektowany do płynnej współpracy z \textit{NSError} i biblioteką \textit{Cocoa}.
 \begin{lstlisting}[label=ObslugaBledow, caption=Nowy model obsługi błedów w Swift]
@@ -811,11 +817,11 @@ func test() {
 \end{lstlisting}
 Dodano nowe funkcje składniowe, które pomagają pisać bardziej przejrzysty kod, poprawiając jednocześnie jego spójność. Zastosowano w \textit{SDK} nowe funkcjonalności z \textit{Objective-C} takie jak typy generyczne czy wartości \textit{null} adnotacji poprawiające bezpieczeństwo kodu. Niektóre z pozostałych ulepszeń to:
 \begin{itemize}
-\item lepsza kontrola przepływu działania przy pomocy \textit{do}, \textit{guard}, \textit{defer} i \textit{repeat}.    
+\item lepsza kontrola przepływu działania przy pomocy \textit{do},\textit{guard}, \textit{defer} i \textit{repeat}.    
 \item rozszerzenia protokołów i domyślna implementacja.
 \item rozszerzone dopasowanie do wzorca do pracy klauzulą if i pętlą for.
 \end{itemize}
-Wraz z nową wersją pojawiła się informacja, że \textit{Swift} stał się oprogramowaniem \textit{open source}. W tym samym czasie otwarta została strona \footnote{Swift.org} z dostępnym kodem, rejestratorem błędów i systematycznymi wersjami deweloperskimi dla każdego. Na razie \textit{Swift} obsługuje platformy \textit{Apple} oraz \textit{Linux} ale pracują na resztą platform.
+Wraz z nową wersją pojawiła się informacja, że \textit{Swift} stał się oprogramowaniem \textit{open source}. W tym samym czasie otwarta została strona \textit{Swift.org} z dostępnym kodem, rejestratorem błędów i systematycznymi wersjami developerskimi dla każdego. Na razie \textit{Swift} obsługuje platformy \textit{Apple} oraz \textit{Linux} ale pracują na resztą platform.
 
 Częścią wspólną dla zmiennych i stałych jest nazwa oraz wartość przechowywane określonego typu. Wartość stałej raz zainicjowanej nie może zostać zmieniona, w przeciwieństwie do zmiennych gdzie wartość może zostać zmieniona wielokrotnie. Podstawową zasadą jest by zadeklarować zmienne lub stałe przed próbą ich użycia. Słowem kluczowym za zadeklarowania stałej w języku \textit{Swift} odpowiada \textit{let}, zaś zmiennej \textit{var} widoczne na listingu \ref{StaleIZmienne}. Dobrym zwyczajem jest by właściwie deklarować stałe i zmienne, co nie tylko sprawia, że nasz kod jest bezpieczniejszy ale świadczy o znajomości pisanego przez nas kodu.
 \begin{lstlisting}[label=StaleIZmienne, caption=Deklaracja stałych i zmiennych w Swift]
@@ -841,7 +847,7 @@ Funkcja widoczna na listingu \ref{Funkcje} nosi nazwę \textit{przywitajSieZ(\_:
 	print(przywitajSieZ("Kamil")) // "Witaj, Kamil!"
 \end{center}
 
-\textit{Swift} dostarcza trzy główne typy kolekcji, tablice, słownik oraz zbiór do przechowywania elementów. Tablice są uporządkowaną kolekcja danych, zbiór natomiast nieuporządkowana kolekcją unikatowych danych, zaś słownik nieuporządkowaną kolekcją typu klucz-wartość. W żadnej z tych kolekcji nie możemy wstawić wartości o różnych typach, daje nam to pewność, że wartość którą chcemy odzyskać z kolekcji jest określonego typu. 
+\textit{Swift} dostarcza trzy główne typy kolekcji, tablice, słownik oraz zbiór do przechowywania elementów. Tablice są uporządkowaną kolekcja danych, zbiór natomiast nieuporządkowana kolekcją unikatowych danych, zaś słownik nieuporządkowaną kolekcją typu klucz--wartość. W żadnej z tych kolekcji nie możemy wstawić wartości o różnych typach, daje nam to pewność, że wartość którą chcemy odzyskać z kolekcji jest określonego typu. 
 W \textit{Objective-C} jeśli zależało nam na strukturze, która raz zainicjowana elementami nie zostanie zmieniona byliśmy zmuszeni do użycia kolekcji o innej nazwie i funkcjonalności od struktury, która pozwalała na taką zmianę. W języku \textit{Swift} słowami kluczowymi oznaczającymi czy kolekcje możemy modyfikować lub nie, odpowiadają tak jak w przypadku zmiennych i stałych, \textit{let} i \textit{var.}
 Pełna nazwa typu tablicy w \textit{Swift} piszemy \textit{Array<Element>}, gdzie \textit{Element} oznacza typ wartości dozwolony do przechowania w tej tablicy. Możemy także skorzystać ze skróconej wersji pisząc tylko \textit{[Element]}. Obydwie formy działają identycznie, choć wersja skrócona jest preferowana. 
 \begin{center}
@@ -879,7 +885,7 @@ Ostatnią kolekcją dostępną w \textit{Swift} jest słownik przechowujący zwi
 \end{center}
 Definicja tworzy pusty słownik przechowujący jako klucz kod pocztowy dla miasta jako wartości. Przykładowe przypisane do istniejącego już słownika wyglądało by następująco:  
 \begin{center}
-	kodyPocztoweMiejscowosci = ["18-300": ""Zambrów"", "16-010": ""Nowodworce"", "12524": "Berlin", "20355": "Hamburg"]
+	kodyPocztoweMiejscowosci = ["18-300": "Zambrów", "16-010": "Nowodworce", "12524": "Berlin", "20355": "Hamburg"]
 \end{center}
 Do iteracji po słowniku możemy wykorzystać strukturę zwaną \textit{tuple} oraz pętle for widoczną za listing \ref{IteracjaPoSlowniku}
 \begin{lstlisting}[label=IteracjaPoSlowniku, caption=Iteracja po słowniku z wykorzystaniem \textit{tuple} i pętli for.]
@@ -888,19 +894,124 @@ for (kodPoczotwy, nazwaMiejscowosci) in kodyPocztoweMiejscowosci {
 		
 }
 \end{lstlisting}
-%Kolekcje w Swift
 \cleardoublepage
 \chapter{Implementacja aplikacji}
 \label{cha:Implementacja aplikacji}
-
+Oprogramowanie \textit{MobiUwB} stworzone na system operacyjny \textit{iOS} w wersji 9.1 lub wyższy ma na celu dostarczenie wygodnego dostępu do informacji dla studenta \textit{Uniwersytetu w Białymstoku} posiadającego urządzenie mobilne firmy \textit{Apple}. W funkcjonalny sposób dostarcza zawartość umieszczaną na oficjalnej stronie internetowej \textit{Uniwersytetu w Białymstoku} wprost do smartfonu lub tabletu użytkownika, bez konieczności korzystania z przeglądarki. 
 \section{Opis aplikacji MobiUwB}
-
+Oprogramowanie mobilne \textit{MobiUwB} jest tak zwaną aplikacją hybrydową z tego względu, że łączy w sobie dwa sposoby tworzenia aplikacji mobilnych. Z jednej strony główne informacje wyświetlane są za pomocą strony \textit{WWW} odpowiednio skonstruowanej by użytkownik miał wrażenie korzystania z aplikacji natywnej. Z drugiej strony korzysta z funkcji natywnych takich jak notyfikacje czy rożne sposoby kontaktu z sekretariatem uniwersytetu. Podejście takie pozwala na łatwiejszą implementacje aplikacji pod różne systemy operacyjne.
 \subsection{Zastosowania}
+Do głównych zastosowań aplikacji mobilnej \textit{MobiUwB} należą:
+\begin{itemize}
+\item \textbf{Dostarczanie informacji} -- Wszystkie ważne informacje dostępne są z poziomu jednego widoku, który dzięki podziałowi na różne kategorie takie jak aktualności czy zajęcia odwołane w przystępny sposób dostarczany jest dla użytkownika. Oprócz aktualizowanych komunikatów zawsze pod ręką znajduje się plan zajęć dla wszystkich studentów wybranych wydziałów.
+\item \textbf{Konfigurowalne notyfikacje} -- Powiadomienia dzięki, którym bez ingerencji użytkownika dostarczane są informacje. Notyfikacje możemy włączyć lub wyłączyć całkowicie. Ustawić z jakich kategorii wiadomości nas interesują, do wyboru mamy: aktualności, zajęcia odwołane, sprawy ogólne, biuro karier oraz szkolenia i praktyki. Ostatnią opcją jest zmiana częstotliwości z jaką aplikacja ma sprawdzać czy nowa informacja pojawiła się w wybranym dziale.
+\item \textbf{Łatwy kontakt z Uniwersytetem} -- Możliwość skontaktowania się z Uniwersytetem za pomocą jednego przycisku. Do wyboru mamy kontakt telefoniczny lub poprzez wysłania wiadomości e-mail. Dostępny jest także adres, który można wyświetlić w postaci lokalizacji \textit{GPS}.
+\item \textbf{Grupowanie informacji} -- Informacje podzielone są na sześć grup: aktualności, zajęcia odwołane, sprawy ogólne, biuro karier, szkolenia i praktyki oraz plan zajęć. Od użytkownika zależy, z której grupy wiadomości go interesują wystarczy, że w głównym widoku aplikacji wybierze podział a strona odpowiednio wyświetli szukane informacje.
+\end{itemize}
 
 \subsection{Funkcje}
+Jedną z najważniejszych klas odpowiedzialną za dostarczenie użytkownikowi notyfikacji o nowych informacjach w wybranych kategoriach jest \textit{AnnouncementManager}. Przy tworzeniu tej klasy wybrałem wzorzec projektowy \textit{singleton} (implementacja widoczna na listingu \ref{AnnouncementManager} w wierszu 3), który pozwala na stworzenie tylko jednej instancji tej klasy. Dzięki temu mamy pewność ze w całej aplikacji istnieje tylko jeden obiekt odpowiedzialny za sprawdzanie czy pojawiła się nowa wiadomość na serwerze oraz że obiekt nie zostanie zniszczony przy przechodzeniu do różnych widoków. Funkcja \textit{newAnnouncementsInCategory(\_:)} (wiersz 10-33) jako parametr wejściowy przyjmuje typ \textit{String} odpowiedzialny za wybraną przez użytkownika kategorie. Z tym parametrem wywoływana jest \textit{dateOfLastAnnouncementsOfCategory(\_:)}, która jest funkcją asynchroniczną odpowiadającą za połączenie z serwerem oraz zwrócenie daty ostatniego ogłoszenia. W dalszej części zwrócona oraz przekonwertowana data do odpowiedniego formatu porównywana jest z datą ostatniego sprawdzania. Data ta pobrana jest z \textit{userDefaults}, który jest słownikiem  przechowującym ustawienia oraz innych potrzebnych informacji o aplikacji. W przypadku gdy \textit{lastAnnouncementDate} jest nowsza od daty ostatniego sprawdzenia wywoływana jest funkcja \textit{sendNotificationForCategory(\_:)}, która wyświetla powiadomienie dla użytkownika odpowiednie dla wybranej kategorii. Końcową czynnością tej funkcji jest przypisanie do zmiennej \textit{lastCheck} timestampa\footnote{Timestamp -- jest sekwencją znaków przedstawiającą kiedy wybrane wydarzenie zaistniało.} oraz zapisanie wyniku do słownika \textit{userDefault} pod indeksem \textit{lastCheck}.
+\newpage
+\begin{lstlisting}[label=AnnouncementManager, caption=Klasa AnnouncementManager]
+class AnnouncementManager {
+    
+    static let sharedInstance = AnnouncementManager()
+    
+    
+   private init() {
 
+    }
+    
+    func newAnnouncementsInCategory(category:String) {
+        
+        
+        dateOfLastAnnouncementsOfCategory(category) { completion in
+            if let lastAnnouncementDate = self.parseAnnouncementDate(completion) {
+                var lastCheck:NSDate
+                if let lastCheckedDate:NSDate = self.userDefaults.objectForKey("lastCheck") as? NSDate {
+                    lastCheck = lastCheckedDate
+                } else {
+                    lastCheck = NSDate()
+                }
+                let compare = lastAnnouncementDate.compare(lastCheck)
+                if compare == .OrderedDescending {
+                    self.sendNotificationForCategory(category)
+                }
+                lastCheck = NSDate()
+                self.userDefaults.setObject(lastCheck, forKey: "lastCheck")
+            }
+            
+            
+        }
+        
+    }
+@end
+\end{lstlisting}
+\newpage
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{image/HomeIphone.png}
+  \captionof{figure}{Ekran główny}
+  \label{fig:Home}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{image/KontaktIphone.png}
+  \captionof{figure}{Ekran kontaktu}
+  \label{fig:Kontakt}
+\end{minipage}
+\end{figure}
 \subsection{Elementy}
+Aplikacja \textit{MobiUwB} na iOS składa się z wielu elementów, które w większości ukryte są dla użytkownika pod interfejsem graficznym ale połączeniu ze sobą komponują się w mobilną aplikacje. Interfejs ten składa się głownie z ekranów aplikacji, które można podzielić na :
+\begin{itemize}
+\item \textbf{Ekran główny} -- jest pierwszy interaktywny ekran jaki użytkownik widzi po włączeniu aplikacji. Składa się z dwóch elementów \textit{navigation bar} oraz \textit{web view}. Pierwszy z elementów zawiera dwa \textit{navigation items} na przeciwległych końcach belki odpowiedzialnych na wysuwane menu przedzielone tytułem zmieniającym się w zależności od ekranu. Całości dopełnia wyświetlana strona \textit{WWW} mieszcząca się w elemencie \textit{web view}.Ekran zaprezentowana jest na rysunku \ref{fig:Home}.
+\item \textbf{Wysuwane menu} -- Rysunek \ref{fig:Menu} przedstawia lewe i prawe wysuwane menu dzięki, którym użytkownik może swobodnie nawigować po aplikacji. Prawe menu odpowiedzialne jest za przełączanie po wydziałach uniwersytetu zaś lewe menu zawiera listę ekranów dostępnych dla użytkownika.
+\end{itemize}
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{image/LeweIphone.png}
+  \caption{Lewe menu}
+  \label{fig:Lewe}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{image/PraweIphone.png}
+  \caption{Prawe menu}
+  \label{fig:Prawe}
+\end{subfigure}
+\caption{Lewe oraz prawe menu aplikacji}
+\label{fig:Menu}
+\end{figure}
+\begin{itemize}
+\item \textbf{Ekran kontaku} -- Na ekranie widocznym na rysunku \ref{fig:Kontakt} wyświetlane są informacje potrzebne użytkownikowi przy kontakcie z wybranym instytutem. Oprócz adresu, który jest zwykłym tekstem reszta przycisków uruchamia przypisaną im odpowiednią reakcje. Po wybraniu przycisku z e-mailem uruchamiana jest systemowa skrzynka pocztowa użytkownika z nową wiadomością, także wystarczy wypełnić tylko temat i treść wiadomości. Przycisk z telefonem wybierze oraz zadzwoni na wyświetlony numer. Natomiast lokalizacja wyświetli nam dzięki pobranym współrzędnym z pliku konfiguracyjnego, instytut w systemowej aplikacji \textit{Mapy}. 
+\end{itemize}
+\newpage
 
+\begin{itemize}
+
+\item \textbf{Ekran o programie} -- Oprócz \textit{navigation bar}, które jest widoczne na każdym ekranie, widok składa się także z \textit{table view}. Na ekranie tym wyświetlani są twórcy, opiekun projektu, licencja oraz podziękowania. Wszystkie informacje pobierane są z pliku konfiguracyjnego i widoczne na rysunku  \ref{fig:Oprogramie}.
+\item \textbf{Ekran ustawień} -- Rysunek \ref{fig:Ustawienia} przedstawia dostępne opcje do skonfigurowania przychodzących powiadomień. Główną opcją jest wyłączenie całkowite powiadomień co spowoduje ukrycie dodatkowych ustawień. Zawierają one częstotliwość z jaką aplikacja ma sprawdzać czy nowe informacje pojawiły się na stronie głównej instytutu oraz listę przycisków wyboru dostępnych kategorii.
+\end{itemize}
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{image/OprogramieIphone.png}
+  \captionof{figure}{Ekran o programie}
+  \label{fig:Oprogramie}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{image/UstawieniaIphone.png}
+  \captionof{figure}{Ekran ustawień}
+  \label{fig:Ustawienia}
+\end{minipage}
+\end{figure}
 \section{Architektura programu}
 
 \section{Użyte biblioteki}

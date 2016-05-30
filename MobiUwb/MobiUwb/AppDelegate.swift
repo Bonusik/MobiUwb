@@ -41,9 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.createMenuView()
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert,.Badge,.Sound], categories: nil))
-//        let announcement = AnnouncementManager.sharedInstance
-//        print(announcement.areTheyNewAnnouncementsInCategory("io"))
-        
+        let anntest = AnnouncementManager.sharedInstance
+        anntest.startMonitoring()
         return true
     }
 

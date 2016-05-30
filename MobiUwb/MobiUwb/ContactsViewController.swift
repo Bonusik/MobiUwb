@@ -26,7 +26,7 @@ class ContactsViewController: UIViewController, MFMailComposeViewControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Contacts"
+        self.title = "Kontakt"
         self.setNavigationBarItem()
       let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.Indeterminate

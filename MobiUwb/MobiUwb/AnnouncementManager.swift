@@ -19,24 +19,84 @@ class AnnouncementManager {
 
     }
     
-    func sendNotificationIfNewAnnouncementsInCategory(category:String) {
+    func newAnnouncementsInCategory(category:String) {
         
         
         dateOfLastAnnouncementsOfCategory(category) { completion in
             if let lastAnnouncementDate = self.parseAnnouncementDate(completion) {
-                let lastCheckedDate = self.parseAnnouncementDate("2015-06-12T11:31:14Z")//NSDate()
-                let compare = lastAnnouncementDate.compare(lastCheckedDate!)
-                if compare == .OrderedDescending {
-                    print("YES")
+                var lastCheck:NSDate
+                if let lastCheckedDate:NSDate = self.userDefaults.objectForKey("lastCheck") as? NSDate {
+                    lastCheck = lastCheckedDate
                 } else {
-                    print("NO")
+                    lastCheck = NSDate()
                 }
+                let compare = lastAnnouncementDate.compare(lastCheck)
+                if compare == .OrderedDescending {
+                    self.sendNotificationForCategory(category)
+                }
+                lastCheck = NSDate()
+                self.userDefaults.setObject(lastCheck, forKey: "lastCheck")
             }
             
+            
         }
-
+        
     }
     
+    
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    func startMonitoring() {
+        
+           let frequency = userDefaults.doubleForKey("czestotliwosc")
+        if frequency != 0 {
+        NSTimer.scheduledTimerWithTimeInterval(frequency, target: self, selector: #selector(AnnouncementManager.checkCategory), userInfo: nil, repeats: true)
+            }
+    }
+
+    @objc func checkCategory() {
+        
+        
+        if userDefaults.boolForKey("aktualnosci") {
+            self.newAnnouncementsInCategory("io")
+        }
+        if userDefaults.boolForKey("zajecia") {
+            self.newAnnouncementsInCategory("sz")
+        }
+        if userDefaults.boolForKey("sprawy") {
+            self.newAnnouncementsInCategory("so")
+        }
+        if userDefaults.boolForKey("biuro") {
+            self.newAnnouncementsInCategory("bk")
+        }
+        if userDefaults.boolForKey("szkolenia") {
+            self.newAnnouncementsInCategory("sk")
+        }
+        
+    }
+
+
+    func sendNotificationForCategory(category:String) {
+        let notification:UILocalNotification = UILocalNotification()
+        switch category {
+        case "io":
+            notification.alertBody = "Nowe informacje w Aktualnościach"
+        case "sz":
+            notification.alertBody = "Nowe zajęcia odwołane"
+        case "so":
+            notification.alertBody = "Nowe informache w Sprawy ogólne"
+        case "bk":
+            notification.alertBody = "Nowe ogłoszenia w Biuro karier"
+        case "sk":
+            notification.alertBody = "Nowe szkolenia i praktyki"
+        case "plan":
+            notification.alertBody = "Nowy plan"
+        default:
+            notification.alertBody = ""
+        }
+        notification.soundName = UILocalNotificationDefaultSoundName
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        
+    }
     func dateOfLastAnnouncementsOfCategory(category:String,completion:(String?)->Void){
         
         let categoryURL = "http://ii.uwb.edu.pl/serwis/?/json/"+category

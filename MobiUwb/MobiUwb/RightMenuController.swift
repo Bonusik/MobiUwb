@@ -25,7 +25,7 @@ class RightMenuController: UIViewController, RightMenuProtocol {
     
     
     @IBOutlet weak var tableView: UITableView!
-    var menus = [("Home","Home-100"),("Contacts","ContactIcon3"),("About Program","AboutProgramIcon2"),("Settings", "settings")]
+    var menus = [("Ekran główny","Home-100"),("Kontakt","ContactIcon3"),("O programie","AboutProgramIcon2"),("Ustawienia", "settings")]
     var mainViewController: UIViewController!
     var contactsViewController: UIViewController!
     var aboutProgramViewController: UIViewController!
