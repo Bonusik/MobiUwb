@@ -69,6 +69,7 @@ class RightMenuController: UIViewController, RightMenuProtocol {
         cell.iconImageView.image = UIImage(named: menus[indexPath.row].1)
         cell.iconImageView.image = cell.iconImageView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         cell.iconImageView.tintColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor.blackColor()
 
         return cell
     }

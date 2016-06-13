@@ -24,6 +24,12 @@ Elizabeth Castro.
 \newblock {\em Po prostu HTML, XHTML i CSS}.
 \newblock Helion, vi edition, 2008.
 
+\bibitem{Gamma:2010:Wzorce}
+Ralph Johnson John M.~Vlissides Erich~Gamma, Richard~Helm.
+\newblock {\em Wzorce projektowe. Elementy oprogramowania obiektowego
+  wielokrotnego użytku.}
+\newblock Helion, ii edition, 2010.
+
 \bibitem{Etemad:11:CSS}
 Elika Etemad.
 \newblock Cascading style sheets ({CSS}) snapshot 2010.

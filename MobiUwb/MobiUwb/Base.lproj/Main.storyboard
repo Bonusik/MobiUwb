@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0gM-RC-TBF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="7a2-UK-NyA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0gM-RC-TBF" secondAttribute="trailing" constant="-16" id="LGa-cx-Nbq"/>
@@ -76,13 +76,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pba-gt-kx8">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pba-gt-kx8">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UlT-9T-18U" firstAttribute="top" secondItem="Pba-gt-kx8" secondAttribute="bottom" id="SUf-41-PL3"/>
+                            <constraint firstItem="Pba-gt-kx8" firstAttribute="leading" secondItem="gjz-eh-bpR" secondAttribute="leading" id="gJP-lm-tUd"/>
+                            <constraint firstItem="Pba-gt-kx8" firstAttribute="top" secondItem="gjz-eh-bpR" secondAttribute="top" id="tLS-0I-oVm"/>
+                            <constraint firstAttribute="trailing" secondItem="Pba-gt-kx8" secondAttribute="trailing" id="zLG-U4-R61"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="WebView" destination="Pba-gt-kx8" id="5jz-xH-jmc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMH-jL-02Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

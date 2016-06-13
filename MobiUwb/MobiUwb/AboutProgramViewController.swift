@@ -75,6 +75,7 @@ class AboutProgramViewController: UITableViewController {
         default:
             headerCell.headerTitle.text = "hahash"
         }
+        headerCell.backgroundColor = UIColor.init(red: 31/255.0, green: 31/255.0, blue: 31/255.0, alpha: 1)
         return headerCell
     }
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

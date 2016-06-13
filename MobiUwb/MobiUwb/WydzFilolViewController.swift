@@ -10,6 +10,7 @@ import UIKit
 
 class WydzFilolViewController: UIViewController {
     
+    @IBOutlet weak var WebView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,5 +19,9 @@ class WydzFilolViewController: UIViewController {
         super.viewWillAppear(animated)
         self.setNavigationBarItem()
         self.title = "Wydział Filologiczny"
+        
+        let URL = NSURL(string: "http://ii.uwb.edu.pl/mobi/?place=wf&client=android")
+        WebView.loadRequest(NSURLRequest(URL: URL!))
+        WebView.scrollView.bounces = false;
     }
 }
