@@ -40,6 +40,10 @@ INSTYTUT INFORMATYKI
 \end{center}
 \vfill
 \begin{center}
+\includegraphics[width = 40mm]{image/logo.jpg}
+\end{center}
+\vfill
+\begin{center}
 {\large \imiona{} \MakeUppercase{\nazwiska}}\\
 \end{center}
 \vfill

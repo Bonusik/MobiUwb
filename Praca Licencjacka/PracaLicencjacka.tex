@@ -64,13 +64,24 @@
 
 \listoffigures
 
-\chapter*{Streszczenie}
+\cleardoublepage
 \addcontentsline{toc}{chapter}{Streszczenie}
 \label{cha:Streszczenie}
+\begin{center}
+\textbf{Streszczenie}
+\end{center}
+
 Urządzenia mobilne w coraz większym stopniu stają się naszym głównym źródłem informacji. Dlatego też aplikacja \textit{MobiUwB} dostępna na wszystkie platformy mobilne wychodzi na przeciw potrzebie dostarczenia w przystępny sposób wiadomości dla studentów i pracowników Uniwersytetu w Białymstoku. Niniejsza praca opisuje zagadnienia związane tworzeniem aplikacji \textit{MobiUwB}. W pierwszej kolejności omówione zostały technologie używane do budowania stron internetowych oraz format reprezentowania danych. Kolejnym opisanym elementem jest system operacyjny \textit{iOS} wraz z środowiskiem programistycznym \textit{Xcode} oraz obsługiwane języki programowania. Dalsza część skupiona jest już nad samą aplikacją \textit{MobiUwB}. Zawiera opis aplikacji wraz z zastosowaniem, funkcje odpowiedzialną za wysyłanie notyfikacji oraz jej kod źródłowy, główne elementy programu i charakterystykę architektury aplikacji. W końcowej części znajduję się podsumowanie oraz możliwe drogi rozwoju \textit{MobiUwB}.
 
 \textbf{Słowa kluczowe:} Swift, Objective-C, HTML5, 	JavaScript, aplikacja mobilna.
 
+\begin{center}
+\textbf{Abstract}
+\end{center}
+
+Mobile devices are increasingly becoming our main source of information. Therefore MobiUwB, application  available on all platforms comes up against the need to deliver information in an accessible way for staff and students of University of Białystok. This thesis describes issues related to development of MobiUwB application. The first part of this document explains technologies used in the web development and the representation of data formats. The next part describes iOS operating system and  Xcode IDE with integrated programming languages. The last section concentrates on  MobiUwB. Contains the purpose of application with the description. The functionality responsible for sending notification and its source code. Main UI elements and characteristics of the application's architecture. The final part is the summary and possible ways of future development.
+
+\textbf{Keywords:} Swift, Objective-C, HTML5, JavaScript, mobile application.
 \cleardoublepage
 \chapter*{Wstęp}                        %rozdział nienumerowany
 \label{cha:Wstep}                       %w \label nie używamy polskich znaków
@@ -150,7 +161,7 @@ Do budowy struktury strony wraz z wejściem standardu \textit{HTML5}, oprócz zn
 \begin{figure}[!th]
 \centering
 \includegraphics[scale=.6]{image/StrukturaStrony.png}
-\caption{Struktura strony opisana przy użyciu nowych znaczników obecnych w HTML5}
+\caption{Struktura strony w HTML5}
 \label{fig:Struktura strony }
 \end{figure}
 
