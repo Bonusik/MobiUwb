@@ -1,5 +1,4 @@
 \select@language {polish}
-\contentsline {chapter}{Streszczenie}{5}{chapter*.3}
 \contentsline {chapter}{Wst\IeC {\k e}p}{7}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Serializacja i prezentacja danych}{9}{chapter.1}
 \contentsline {section}{\numberline {1.1}Standardy internetowe}{9}{section.1.1}
